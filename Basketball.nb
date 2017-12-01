@@ -1,0 +1,2782 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     92854,       2774]
+NotebookOptionsPosition[     89168,       2677]
+NotebookOutlinePosition[     89522,       2693]
+CellTagsIndexPosition[     89479,       2690]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", " ", "Basketball", "*)"}]], "Input",
+ CellChangeTimes->{{3.7209918281638947`*^9, 
+  3.720991834708444*^9}},ExpressionUUID->"dfabad77-c71b-4a63-a55a-\
+cac7694495f5"],
+
+Cell[CellGroupData[{
+
+Cell["Get the URLs for all games in a specific month", "Section",
+ CellChangeTimes->{{3.7211380914835157`*^9, 
+  3.7211381156828203`*^9}},ExpressionUUID->"a6e3080e-b4ab-4230-8daa-\
+489e72e1b1a9"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"months", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<october\>\"", ",", " ", "\"\<november\>\"", ",", " ", 
+     "\"\<december\>\"", ",", " ", "\"\<january\>\"", ",", " ", 
+     "\"\<february\>\"", ",", " ", "\"\<march\>\"", ",", "\"\<april\>\""}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"mon", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<Oct\>\"", ",", " ", "\"\<Nov\>\"", ",", " ", "\"\<Dec\>\"", ",", 
+     " ", "\"\<Jan\>\"", ",", " ", "\"\<Feb\>\"", ",", " ", "\"\<Mar\>\"", 
+     ",", "\"\<Apr\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"year", " ", "=", " ", "\"\<2018\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"gameyear", " ", "=", " ", 
+   RowBox[{"ToString", "[", 
+    RowBox[{
+     RowBox[{"ToExpression", "[", "year", "]"}], " ", "-", "1"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m", " ", "=", " ", 
+   RowBox[{"months", "[", 
+    RowBox[{"[", "2", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]"}], "Input",\
+
+ CellChangeTimes->{{3.7209888479293423`*^9, 3.720988910702797*^9}, 
+   3.721137783651595*^9, {3.721137945111227*^9, 3.721137989988093*^9}, {
+   3.721138345613379*^9, 
+   3.721138398340869*^9}},ExpressionUUID->"5e735b6f-f76c-4167-81b9-\
+dd7a0fbf605d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.7211383754715014`*^9, 
+  3.721138393607913*^9}},ExpressionUUID->"a169bb2e-7907-400d-b904-\
+137e4a0420dd"],
+
+Cell[BoxData["\<\"2017\"\>"], "Output",
+ CellChangeTimes->{{3.721138382884156*^9, 
+  3.721138391325501*^9}},ExpressionUUID->"c7636d84-e937-4f8c-b162-\
+4ceedcc70fef"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"month", " ", "=", " ", 
+  RowBox[{"StringJoin", "[", 
+   RowBox[{
+   "\"\<https://www.basketball-reference.com/leagues/NBA_\>\"", ",", "year", 
+    ",", "\"\<_games-\>\"", ",", " ", "m", ",", "\"\<.html\>\""}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.720988937894412*^9, 3.720989001455778*^9}, {
+  3.7209903485535717`*^9, 3.720990352966498*^9}, {3.7211379766612873`*^9, 
+  3.721137978132206*^9}},ExpressionUUID->"86320de5-a6de-4f44-a1a1-\
+ed0364edc65d"],
+
+Cell[BoxData["\<\"https://www.basketball-reference.com/leagues/NBA_2018_games-\
+november.html\"\>"], "Output",
+ CellChangeTimes->{{3.720988969943186*^9, 3.720989001864059*^9}, 
+   3.720990071791575*^9, 3.720990357907579*^9, 3.7211371449420652`*^9, 
+   3.721137880923644*^9, 3.721137995280287*^9, 3.7211384008227663`*^9, 
+   3.721140407689712*^9},ExpressionUUID->"e0da73ad-7e5a-4c0f-bd16-\
+7c72eefefa3f"]
+}, Open  ]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"teamnames", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<Atlanta Hawks\>\"", ",", "\"\<ATL\>\"", ",", 
+     "\"\<Boston Celtics\>\"", ",", "\"\<BOS\>\"", ",", 
+     "\"\<Brooklyn Nets\>\"", ",", "\"\<BRK\>\"", ",", 
+     "\"\<Charlotte Hornets\>\"", ",", "\"\<CHO\>\"", ",", 
+     "\"\<Chicago Bulls\>\"", ",", "\"\<CHI\>\"", ",", 
+     "\"\<Cleveland Cavaliers\>\"", ",", "\"\<CLE\>\"", ",", 
+     "\"\<Dallas Mavericks\>\"", ",", "\"\<DAL\>\"", ",", 
+     "\"\<Denver Nuggets\>\"", ",", "\"\<DEN\>\"", ",", 
+     "\"\<Detroit Pistons\>\"", ",", "\"\<DET\>\"", ",", 
+     "\"\<Golden State Warriors\>\"", ",", "\"\<GSW\>\"", ",", 
+     "\"\<Houston Rockets\>\"", ",", "\"\<HOU\>\"", ",", 
+     "\"\<Indiana Pacers\>\"", ",", "\"\<IND\>\"", ",", 
+     "\"\<Los Angeles Clippers\>\"", ",", "\"\<LAC\>\"", ",", 
+     "\"\<Los Angeles Lakers\>\"", ",", "\"\<LAL\>\"", ",", 
+     "\"\<Memphis Grizzlies\>\"", ",", "\"\<MEM\>\"", ",", 
+     "\"\<Miami Heat\>\"", ",", "\"\<MIA\>\"", ",", "\"\<Milwaukee Bucks\>\"",
+      ",", "\"\<MIL\>\"", ",", "\"\<Minnesota Timberwolves\>\"", ",", 
+     "\"\<MIN\>\"", ",", "\"\<New Orleans Pelicans\>\"", ",", "\"\<NOP\>\"", 
+     ",", "\"\<New York Knicks\>\"", ",", "\"\<NYK\>\"", ",", 
+     "\"\<Oklahoma City Thunder\>\"", ",", "\"\<OKC\>\"", ",", 
+     "\"\<Orlando Magic\>\"", ",", "\"\<ORL\>\"", ",", 
+     "\"\<Philadelphia 76ers\>\"", ",", "\"\<PHI\>\"", ",", 
+     "\"\<Phoenix Suns\>\"", ",", "\"\<PHO\>\"", ",", 
+     "\"\<Portland Trail Blazers\>\"", ",", "\"\<POR\>\"", ",", 
+     "\"\<Sacramento Kings\>\"", ",", "\"\<SAC\>\"", ",", 
+     "\"\<San Antonio Spurs\>\"", ",", "\"\<SAS\>\"", ",", 
+     "\"\<Toronto Raptors\>\"", ",", "\"\<TOR\>\"", ",", "\"\<Utah Jazz\>\"", 
+     ",", "\"\<UTA\>\"", ",", "\"\<Washington Wizards\>\"", ",", 
+     "\"\<WAS\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"teamnamesNo3lc", " ", "=", " ", 
+   RowBox[{"teamnames", "[", 
+    RowBox[{"[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Range", "[", 
+        RowBox[{
+         RowBox[{"Length", "[", "teamnames", "]"}], "/", "2"}], "]"}], "*", 
+       "2"}], "-", "1"}], "]"}], "]"}]}], ";"}], "\n"}], "Input",
+ CellChangeTimes->{{3.7209909550260887`*^9, 3.7209909558210077`*^9}, {
+  3.721137796946047*^9, 3.7211378453132677`*^9}, {3.72114161950875*^9, 
+  3.721141634372448*^9}},ExpressionUUID->"b2de68e6-124d-4441-8222-\
+57aaaa6490b0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"teams", " ", "=", " ", 
+   RowBox[{"Import", "[", 
+    RowBox[{"month", ",", "\"\<Data\>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.720988595831235*^9, 3.720988624846837*^9}, {
+  3.720988766780814*^9, 3.720988769131147*^9}, {3.720988989738069*^9, 
+  3.720988990621379*^9}},ExpressionUUID->"75411062-f313-4bc6-9507-\
+e7129d6e1e19"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"gamesstrings", " ", "=", " ", 
+     RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"(*", " ", 
+    RowBox[{"For", " ", "every", " ", "game"}], " ", "*)"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"For", "[", 
+    RowBox[{
+     RowBox[{"j", " ", "=", " ", "1"}], ",", " ", 
+     RowBox[{"j", " ", "\[LessEqual]", " ", 
+      RowBox[{"Length", "[", 
+       RowBox[{"teams", "[", 
+        RowBox[{"[", 
+         RowBox[{"4", ",", "1", ",", "3"}], "]"}], "]"}], "]"}]}], ",", 
+     RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", "day", " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"day", " ", "=", " ", 
+       RowBox[{
+        RowBox[{"StringTake", "[", 
+         RowBox[{
+          RowBox[{"teams", "[", 
+           RowBox[{"[", 
+            RowBox[{"4", ",", "1", ",", "3", ",", "j", ",", "1"}], "]"}], 
+           "]"}], ",", 
+          RowBox[{"StringPosition", "[", 
+           RowBox[{
+            RowBox[{"teams", "[", 
+             RowBox[{"[", 
+              RowBox[{"4", ",", "1", ",", "3", ",", "j", ",", "1"}], "]"}], 
+             "]"}], ",", "NumberString", ",", "1"}], "]"}]}], "]"}], "[", 
+        RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"ToExpression", "[", "day", "]"}], "<", "10"}], ",", 
+        RowBox[{"day", " ", "=", " ", 
+         RowBox[{"StringJoin", "[", 
+          RowBox[{"\"\<0\>\"", ",", "day"}], "]"}]}]}], "]"}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{
+        RowBox[{
+        "Position", " ", "of", " ", "home", " ", "team", " ", "in", " ", 
+         "team", " ", "names", " ", "list"}], " ", "+", 
+        RowBox[{
+        "1", " ", "gives", " ", "location", " ", "of", " ", "3", " ", 
+         "letter", " ", "code"}]}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"p", " ", "=", " ", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"Position", "[", 
+           RowBox[{"teamnames", ",", 
+            RowBox[{"teams", "[", 
+             RowBox[{"[", 
+              RowBox[{"4", ",", "1", ",", "3", ",", "j", ",", "5"}], "]"}], 
+             "]"}]}], "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}], " ", "+", " ", "1"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"For", "[", 
+       RowBox[{
+        RowBox[{"i", " ", "=", "1"}], ",", " ", 
+        RowBox[{"i", " ", "\[LessEqual]", " ", 
+         RowBox[{"Length", "[", "mon", "]"}]}], ",", 
+        RowBox[{"i", "++"}], ",", " ", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"StringContainsQ", "[", 
+           RowBox[{
+            RowBox[{"teams", "[", 
+             RowBox[{"[", 
+              RowBox[{"4", ",", "1", ",", "3", ",", "j", ",", "1"}], "]"}], 
+             "]"}], ",", 
+            RowBox[{"mon", "[", 
+             RowBox[{"[", "i", "]"}], "]"}]}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"(*", "dauy", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"(*", "Month", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"gamesstrings", ",", 
+             RowBox[{"StringJoin", "[", 
+              RowBox[{"gameyear", ",", 
+               RowBox[{"ToString", "[", 
+                RowBox[{"Mod", "[", 
+                 RowBox[{
+                  RowBox[{"i", "+", "9"}], ",", "12"}], "]"}], "]"}], ",", 
+               "day", ",", "\"\<0\>\"", ",", " ", 
+               RowBox[{"teamnames", "[", 
+                RowBox[{"[", "p", "]"}], "]"}]}], "]"}]}], "]"}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]}], 
+    "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.720990227570343*^9, 3.720990322209667*^9}, {
+   3.7209903723632708`*^9, 3.720990387879775*^9}, {3.7209907976255617`*^9, 
+   3.720990896671185*^9}, 3.72099093435715*^9, {3.7209912183896503`*^9, 
+   3.720991301058106*^9}, {3.721137341453622*^9, 3.721137341605053*^9}, {
+   3.7211374223519497`*^9, 3.721137456417536*^9}, {3.721137646663661*^9, 
+   3.721137654590603*^9}, {3.7211377104323997`*^9, 3.721137764155966*^9}, {
+   3.721138289272092*^9, 3.721138292151573*^9}, {3.7211383355198717`*^9, 
+   3.721138339446389*^9}, {3.7211384087429132`*^9, 3.721138410951457*^9}, 
+   3.7211384810923643`*^9, {3.7211402793032827`*^9, 
+   3.7211403198052998`*^9}},ExpressionUUID->"da53dcfa-6e16-4aeb-9e03-\
+244f77a09cb3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Get the Game Data for a list of games", "Section",
+ CellChangeTimes->{{3.7211380914835157`*^9, 
+  3.721138145993881*^9}},ExpressionUUID->"d6d7af99-c8bd-4731-b3dc-\
+4caeec0623f8"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"gamestats", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", "1"}], ",", " ", 
+    RowBox[{"i", " ", "\[LessEqual]", " ", 
+     RowBox[{
+      RowBox[{"Length", "[", "gamesstrings", "]"}], "-", "100"}]}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Print", "[", 
+      RowBox[{"i", ",", "\"\< out of \>\"", ",", 
+       RowBox[{
+        RowBox[{"Length", "[", "gamesstrings", "]"}], "-", "100"}]}], "]"}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"game", " ", "=", " ", 
+      RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{"make", " ", "URL"}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"gameurl", " ", "=", " ", 
+      RowBox[{"ToString", "[", 
+       RowBox[{"StringJoin", "[", 
+        RowBox[{
+        "\"\<https://www.basketball-reference.com/boxscores/\>\"", ",", 
+         RowBox[{"gamesstrings", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], ",", "\"\<.html\>\""}], "]"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Import", " ", "data"}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"gamedata", " ", "=", " ", 
+      RowBox[{"Import", "[", 
+       RowBox[{"gameurl", ",", " ", "\"\<Data\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{"reshape", " ", "data"}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", " ", "=", "1"}], ",", " ", 
+       RowBox[{"j", " ", "\[LessEqual]", " ", "4"}], ",", " ", 
+       RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+        "get", " ", "stats", "  ", "each", " ", "team", " ", "has", " ", 
+         "regualar", " ", "and", " ", "advanced"}], " ", "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"d", " ", "=", " ", 
+         RowBox[{"gamedata", "[", 
+          RowBox[{"[", 
+           RowBox[{"4", ",", "j", ",", "3"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"header", " ", "=", " ", 
+         RowBox[{
+          RowBox[{"gamedata", "[", 
+           RowBox[{"[", 
+            RowBox[{"4", ",", "j", ",", "2"}], "]"}], "]"}], "[", 
+          RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"PrependTo", "[", 
+         RowBox[{"d", ",", " ", "header"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"totals", " ", "=", " ", 
+         RowBox[{"gamedata", "[", 
+          RowBox[{"[", 
+           RowBox[{"4", ",", "j", ",", "4"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"TableForm", "[", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"d", ",", "totals"}], "]"}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"game", ",", "d"}], "]"}], ";"}]}], "\[IndentingNewLine]", 
+      "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"gamestats", ",", "game"}], "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.7211381808992643`*^9, 3.721138221928339*^9}, {
+  3.721138491842814*^9, 3.721138495897784*^9}, {3.721139040431117*^9, 
+  3.7211390707071333`*^9}, {3.721139814573172*^9, 3.721139993364601*^9}, {
+  3.721140353847164*^9, 3.721140381411652*^9}, {3.721140431073946*^9, 
+  3.7211404457839203`*^9}},ExpressionUUID->"2f40f2d7-e398-4fd9-a5ff-\
+494fbe8a2e44"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"outcomes", " ", "=", " ", 
+   RowBox[{"teams", "[", 
+    RowBox[{"[", 
+     RowBox[{"4", ",", "1", ",", "3", ",", 
+      RowBox[{";;", "113"}], ",", 
+      RowBox[{"3", ";;", "6"}]}], "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.721141054231642*^9, 
+  3.721141071165061*^9}},ExpressionUUID->"4b800d91-3c7d-426c-a318-\
+dac5cd5e801b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", 
+  RowBox[{"gamestats", "[", 
+   RowBox[{"[", "2", "]"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7211400387984123`*^9, 
+  3.7211400921451597`*^9}},ExpressionUUID->"d8064074-3e25-4afe-8c16-\
+85bae99fe0fa"],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {"\<\"Starters\"\>"},
+       {"\<\"MP\"\>"},
+       {"\<\"FG\"\>"},
+       {"\<\"FGA\"\>"},
+       {"\<\"FG%\"\>"},
+       {"\<\"3P\"\>"},
+       {"\<\"3PA\"\>"},
+       {"\<\"3P%\"\>"},
+       {"\<\"FT\"\>"},
+       {"\<\"FTA\"\>"},
+       {"\<\"FT%\"\>"},
+       {"\<\"ORB\"\>"},
+       {"\<\"DRB\"\>"},
+       {"\<\"TRB\"\>"},
+       {"\<\"AST\"\>"},
+       {"\<\"STL\"\>"},
+       {"\<\"BLK\"\>"},
+       {"\<\"TOV\"\>"},
+       {"\<\"PF\"\>"},
+       {"\<\"PTS\"\>"},
+       {"\<\"+/-\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Khris Middleton\"\>"},
+       {"\<\"39:36\"\>"},
+       {"15"},
+       {"28"},
+       {"0.536`"},
+       {"5"},
+       {"11"},
+       {"0.455`"},
+       {"8"},
+       {"10"},
+       {"0.8`"},
+       {"2"},
+       {"3"},
+       {"5"},
+       {"7"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"4"},
+       {"43"},
+       {"1"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Malcolm Brogdon\"\>"},
+       {"\<\"37:28\"\>"},
+       {"9"},
+       {"16"},
+       {"0.563`"},
+       {"2"},
+       {"4"},
+       {"0.5`"},
+       {"0"},
+       {"1"},
+       {"0.`"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"4"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"5"},
+       {"20"},
+       {
+        RowBox[{"-", "16"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Tony Snell\"\>"},
+       {"\<\"37:21\"\>"},
+       {"6"},
+       {"7"},
+       {"0.857`"},
+       {"5"},
+       {"6"},
+       {"0.833`"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"2"},
+       {"2"},
+       {"3"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"17"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Giannis Antetokounmpo\"\>"},
+       {"\<\"31:57\"\>"},
+       {"5"},
+       {"16"},
+       {"0.313`"},
+       {"0"},
+       {"2"},
+       {"0.`"},
+       {"4"},
+       {"4"},
+       {"1.`"},
+       {"1"},
+       {"12"},
+       {"13"},
+       {"5"},
+       {"2"},
+       {"2"},
+       {"3"},
+       {"5"},
+       {"14"},
+       {"14"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"John Henson\"\>"},
+       {"\<\"29:14\"\>"},
+       {"2"},
+       {"6"},
+       {"0.333`"},
+       {"0"},
+       {"1"},
+       {"0.`"},
+       {"0"},
+       {"0"},
+       {"4"},
+       {"6"},
+       {"10"},
+       {"6"},
+       {"1"},
+       {"1"},
+       {"4"},
+       {"5"},
+       {"4"},
+       {"12"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Reserves\"\>"},
+       {"\<\"MP\"\>"},
+       {"\<\"FG\"\>"},
+       {"\<\"FGA\"\>"},
+       {"\<\"FG%\"\>"},
+       {"\<\"3P\"\>"},
+       {"\<\"3PA\"\>"},
+       {"\<\"3P%\"\>"},
+       {"\<\"FT\"\>"},
+       {"\<\"FTA\"\>"},
+       {"\<\"FT%\"\>"},
+       {"\<\"ORB\"\>"},
+       {"\<\"DRB\"\>"},
+       {"\<\"TRB\"\>"},
+       {"\<\"AST\"\>"},
+       {"\<\"STL\"\>"},
+       {"\<\"BLK\"\>"},
+       {"\<\"TOV\"\>"},
+       {"\<\"PF\"\>"},
+       {"\<\"PTS\"\>"},
+       {"\<\"+/-\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Mirza Teletovic\"\>"},
+       {"\<\"20:58\"\>"},
+       {"4"},
+       {"8"},
+       {"0.5`"},
+       {"4"},
+       {"6"},
+       {"0.667`"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"3"},
+       {"4"},
+       {"1"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"12"},
+       {
+        RowBox[{"-", "20"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Thon Maker\"\>"},
+       {"\<\"18:46\"\>"},
+       {"2"},
+       {"4"},
+       {"0.5`"},
+       {"1"},
+       {"2"},
+       {"0.5`"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"2"},
+       {"3"},
+       {"5"},
+       {
+        RowBox[{"-", "17"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Matthew Dellavedova\"\>"},
+       {"\<\"18:02\"\>"},
+       {"1"},
+       {"3"},
+       {"0.333`"},
+       {"1"},
+       {"2"},
+       {"0.5`"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"2"},
+       {"3"},
+       {"3"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"3"},
+       {
+        RowBox[{"-", "3"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"DeAndre Liggins\"\>"},
+       {"\<\"6:38\"\>"},
+       {"1"},
+       {"3"},
+       {"0.333`"},
+       {"1"},
+       {"2"},
+       {"0.5`"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"0"},
+       {"3"},
+       {"4"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Sterling Brown\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"D.J. Wilson\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Jason Terry\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Rashad Vaughn\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Team Totals\"\>"},
+       {"240"},
+       {"45"},
+       {"91"},
+       {"0.495`"},
+       {"19"},
+       {"36"},
+       {"0.528`"},
+       {"12"},
+       {"15"},
+       {"0.8`"},
+       {"9"},
+       {"31"},
+       {"40"},
+       {"29"},
+       {"3"},
+       {"3"},
+       {"14"},
+       {"25"},
+       {"121"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]},
+    {GridBox[{
+       {"\<\"Starters\"\>"},
+       {"\<\"MP\"\>"},
+       {"\<\"TS%\"\>"},
+       {"\<\"eFG%\"\>"},
+       {"\<\"3PAr\"\>"},
+       {"\<\"FTr\"\>"},
+       {"\<\"ORB%\"\>"},
+       {"\<\"DRB%\"\>"},
+       {"\<\"TRB%\"\>"},
+       {"\<\"AST%\"\>"},
+       {"\<\"STL%\"\>"},
+       {"\<\"BLK%\"\>"},
+       {"\<\"TOV%\"\>"},
+       {"\<\"USG%\"\>"},
+       {"\<\"ORtg\"\>"},
+       {"\<\"DRtg\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Khris Middleton\"\>"},
+       {"\<\"39:36\"\>"},
+       {"0.664`"},
+       {"0.625`"},
+       {"0.393`"},
+       {"0.357`"},
+       {"5.6`"},
+       {"9.6`"},
+       {"7.5`"},
+       {"31.6`"},
+       {"0.`"},
+       {"0.`"},
+       {"0.`"},
+       {"35.2`"},
+       {"146"},
+       {"130"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Malcolm Brogdon\"\>"},
+       {"\<\"37:28\"\>"},
+       {"0.608`"},
+       {"0.625`"},
+       {"0.25`"},
+       {"0.063`"},
+       {"0.`"},
+       {"3.4`"},
+       {"1.6`"},
+       {"15.3`"},
+       {"0.`"},
+       {"0.`"},
+       {"5.7`"},
+       {"20.`"},
+       {"121"},
+       {"131"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Tony Snell\"\>"},
+       {"\<\"37:21\"\>"},
+       {"1.214`"},
+       {"1.214`"},
+       {"0.857`"},
+       {"0.`"},
+       {"0.`"},
+       {"6.8`"},
+       {"3.2`"},
+       {"10.3`"},
+       {"0.`"},
+       {"0.`"},
+       {"12.5`"},
+       {"9.2`"},
+       {"192"},
+       {"130"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Giannis Antetokounmpo\"\>"},
+       {"\<\"31:57\"\>"},
+       {"0.394`"},
+       {"0.313`"},
+       {"0.125`"},
+       {"0.25`"},
+       {"3.5`"},
+       {"47.4`"},
+       {"24.1`"},
+       {"20.`"},
+       {"3.`"},
+       {"5.1`"},
+       {"14.5`"},
+       {"27.9`"},
+       {"88"},
+       {"113"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"John Henson\"\>"},
+       {"\<\"29:14\"\>"},
+       {"0.333`"},
+       {"0.333`"},
+       {"0.167`"},
+       {"0.`"},
+       {"15.3`"},
+       {"25.9`"},
+       {"20.3`"},
+       {"23.6`"},
+       {"1.6`"},
+       {"2.8`"},
+       {"40.`"},
+       {"14.7`"},
+       {"92"},
+       {"121"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Reserves\"\>"},
+       {"\<\"MP\"\>"},
+       {"\<\"TS%\"\>"},
+       {"\<\"eFG%\"\>"},
+       {"\<\"3PAr\"\>"},
+       {"\<\"FTr\"\>"},
+       {"\<\"ORB%\"\>"},
+       {"\<\"DRB%\"\>"},
+       {"\<\"TRB%\"\>"},
+       {"\<\"AST%\"\>"},
+       {"\<\"STL%\"\>"},
+       {"\<\"BLK%\"\>"},
+       {"\<\"TOV%\"\>"},
+       {"\<\"USG%\"\>"},
+       {"\<\"ORtg\"\>"},
+       {"\<\"DRtg\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Mirza Teletovic\"\>"},
+       {"\<\"20:58\"\>"},
+       {"0.75`"},
+       {"0.75`"},
+       {"0.75`"},
+       {"0.`"},
+       {"5.3`"},
+       {"18.1`"},
+       {"11.3`"},
+       {"6.4`"},
+       {"0.`"},
+       {"0.`"},
+       {"11.1`"},
+       {"18.5`"},
+       {"130"},
+       {"129"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Thon Maker\"\>"},
+       {"\<\"18:46\"\>"},
+       {"0.625`"},
+       {"0.625`"},
+       {"0.5`"},
+       {"0.`"},
+       {"0.`"},
+       {"6.7`"},
+       {"3.2`"},
+       {"0.`"},
+       {"0.`"},
+       {"0.`"},
+       {"33.3`"},
+       {"13.8`"},
+       {"72"},
+       {"130"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Matthew Dellavedova\"\>"},
+       {"\<\"18:02\"\>"},
+       {"0.5`"},
+       {"0.5`"},
+       {"0.667`"},
+       {"0.`"},
+       {"6.2`"},
+       {"14.`"},
+       {"9.9`"},
+       {"18.9`"},
+       {"0.`"},
+       {"0.`"},
+       {"25.`"},
+       {"9.5`"},
+       {"116"},
+       {"129"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"DeAndre Liggins\"\>"},
+       {"\<\"6:38\"\>"},
+       {"0.5`"},
+       {"0.5`"},
+       {"0.667`"},
+       {"0.`"},
+       {"0.`"},
+       {"19.`"},
+       {"8.9`"},
+       {"0.`"},
+       {"0.`"},
+       {"0.`"},
+       {"25.`"},
+       {"25.9`"},
+       {"69"},
+       {"129"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Jason Terry\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"D.J. Wilson\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Sterling Brown\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Rashad Vaughn\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Team Totals\"\>"},
+       {"240"},
+       {"0.62`"},
+       {"0.599`"},
+       {"0.396`"},
+       {"0.165`"},
+       {"20.9`"},
+       {"81.6`"},
+       {"49.4`"},
+       {"64.4`"},
+       {"3.`"},
+       {"5.1`"},
+       {"12.5`"},
+       {"100.`"},
+       {"121.2`"},
+       {"126.2`"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]},
+    {GridBox[{
+       {"\<\"Starters\"\>"},
+       {"\<\"MP\"\>"},
+       {"\<\"FG\"\>"},
+       {"\<\"FGA\"\>"},
+       {"\<\"FG%\"\>"},
+       {"\<\"3P\"\>"},
+       {"\<\"3PA\"\>"},
+       {"\<\"3P%\"\>"},
+       {"\<\"FT\"\>"},
+       {"\<\"FTA\"\>"},
+       {"\<\"FT%\"\>"},
+       {"\<\"ORB\"\>"},
+       {"\<\"DRB\"\>"},
+       {"\<\"TRB\"\>"},
+       {"\<\"AST\"\>"},
+       {"\<\"STL\"\>"},
+       {"\<\"BLK\"\>"},
+       {"\<\"TOV\"\>"},
+       {"\<\"PF\"\>"},
+       {"\<\"PTS\"\>"},
+       {"\<\"+/-\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Kemba Walker\"\>"},
+       {"\<\"34:18\"\>"},
+       {"8"},
+       {"12"},
+       {"0.667`"},
+       {"3"},
+       {"4"},
+       {"0.75`"},
+       {"7"},
+       {"7"},
+       {"1.`"},
+       {"0"},
+       {"2"},
+       {"2"},
+       {"3"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"0"},
+       {"26"},
+       {
+        RowBox[{"-", "8"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Marvin Williams\"\>"},
+       {"\<\"29:21\"\>"},
+       {"5"},
+       {"8"},
+       {"0.625`"},
+       {"3"},
+       {"5"},
+       {"0.6`"},
+       {"2"},
+       {"2"},
+       {"1.`"},
+       {"1"},
+       {"3"},
+       {"4"},
+       {"0"},
+       {"1"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"15"},
+       {
+        RowBox[{"-", "11"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Dwight Howard\"\>"},
+       {"\<\"29:13\"\>"},
+       {"6"},
+       {"10"},
+       {"0.6`"},
+       {"0"},
+       {"0"},
+       {"5"},
+       {"11"},
+       {"0.455`"},
+       {"2"},
+       {"9"},
+       {"11"},
+       {"3"},
+       {"1"},
+       {"0"},
+       {"6"},
+       {"4"},
+       {"17"},
+       {
+        RowBox[{"-", "11"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Jeremy Lamb\"\>"},
+       {"\<\"23:19\"\>"},
+       {"5"},
+       {"11"},
+       {"0.455`"},
+       {"2"},
+       {"4"},
+       {"0.5`"},
+       {"4"},
+       {"5"},
+       {"0.8`"},
+       {"0"},
+       {"4"},
+       {"4"},
+       {"2"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"0"},
+       {"16"},
+       {
+        RowBox[{"-", "2"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Michael Kidd-Gilchrist\"\>"},
+       {"\<\"7:25\"\>"},
+       {"0"},
+       {"2"},
+       {"0.`"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"1"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"0"},
+       {
+        RowBox[{"-", "2"}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Reserves\"\>"},
+       {"\<\"MP\"\>"},
+       {"\<\"FG\"\>"},
+       {"\<\"FGA\"\>"},
+       {"\<\"FG%\"\>"},
+       {"\<\"3P\"\>"},
+       {"\<\"3PA\"\>"},
+       {"\<\"3P%\"\>"},
+       {"\<\"FT\"\>"},
+       {"\<\"FTA\"\>"},
+       {"\<\"FT%\"\>"},
+       {"\<\"ORB\"\>"},
+       {"\<\"DRB\"\>"},
+       {"\<\"TRB\"\>"},
+       {"\<\"AST\"\>"},
+       {"\<\"STL\"\>"},
+       {"\<\"BLK\"\>"},
+       {"\<\"TOV\"\>"},
+       {"\<\"PF\"\>"},
+       {"\<\"PTS\"\>"},
+       {"\<\"+/-\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Frank Kaminsky\"\>"},
+       {"\<\"25:40\"\>"},
+       {"5"},
+       {"9"},
+       {"0.556`"},
+       {"0"},
+       {"1"},
+       {"0.`"},
+       {"1"},
+       {"1"},
+       {"1.`"},
+       {"1"},
+       {"2"},
+       {"3"},
+       {"4"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"0"},
+       {"11"},
+       {"18"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Treveon Graham\"\>"},
+       {"\<\"24:53\"\>"},
+       {"0"},
+       {"1"},
+       {"0.`"},
+       {"0"},
+       {"1"},
+       {"0.`"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"2"},
+       {"5"},
+       {"1"},
+       {"0"},
+       {"1"},
+       {"6"},
+       {"0"},
+       {"16"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Dwayne Bacon\"\>"},
+       {"\<\"24:29\"\>"},
+       {"4"},
+       {"9"},
+       {"0.444`"},
+       {"1"},
+       {"2"},
+       {"0.5`"},
+       {"1"},
+       {"1"},
+       {"1.`"},
+       {"0"},
+       {"4"},
+       {"4"},
+       {"1"},
+       {"1"},
+       {"1"},
+       {"0"},
+       {"5"},
+       {"10"},
+       {"5"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Malik Monk\"\>"},
+       {"\<\"22:39\"\>"},
+       {"10"},
+       {"17"},
+       {"0.588`"},
+       {"5"},
+       {"8"},
+       {"0.625`"},
+       {"0"},
+       {"0"},
+       {"0"},
+       {"2"},
+       {"2"},
+       {"1"},
+       {"1"},
+       {"0"},
+       {"0"},
+       {"1"},
+       {"25"},
+       {"6"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Cody Zeller\"\>"},
+       {"\<\"18:43\"\>"},
+       {"2"},
+       {"5"},
+       {"0.4`"},
+       {"0"},
+       {"0"},
+       {"2"},
+       {"2"},
+       {"1.`"},
+       {"2"},
+       {"6"},
+       {"8"},
+       {"1"},
+       {"0"},
+       {"1"},
+       {"1"},
+       {"1"},
+       {"6"},
+       {"14"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Johnny O'Bryant\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Marcus Paige\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Team Totals\"\>"},
+       {"240"},
+       {"45"},
+       {"84"},
+       {"0.536`"},
+       {"14"},
+       {"25"},
+       {"0.56`"},
+       {"22"},
+       {"29"},
+       {"0.759`"},
+       {"7"},
+       {"34"},
+       {"41"},
+       {"21"},
+       {"5"},
+       {"3"},
+       {"11"},
+       {"18"},
+       {"126"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {"\<\"Starters\"\>"},
+       {"\<\"MP\"\>"},
+       {"\<\"TS%\"\>"},
+       {"\<\"eFG%\"\>"},
+       {"\<\"3PAr\"\>"},
+       {"\<\"FTr\"\>"},
+       {"\<\"ORB%\"\>"},
+       {"\<\"DRB%\"\>"},
+       {"\<\"TRB%\"\>"},
+       {"\<\"AST%\"\>"},
+       {"\<\"STL%\"\>"},
+       {"\<\"BLK%\"\>"},
+       {"\<\"TOV%\"\>"},
+       {"\<\"USG%\"\>"},
+       {"\<\"ORtg\"\>"},
+       {"\<\"DRtg\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Kemba Walker\"\>"},
+       {"\<\"34:18\"\>"},
+       {"0.862`"},
+       {"0.792`"},
+       {"0.333`"},
+       {"0.583`"},
+       {"0.`"},
+       {"6.5`"},
+       {"3.5`"},
+       {"12.4`"},
+       {"0.`"},
+       {"2.5`"},
+       {"6.2`"},
+       {"20.9`"},
+       {"167"},
+       {"125"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Marvin Williams\"\>"},
+       {"\<\"29:21\"\>"},
+       {"0.845`"},
+       {"0.813`"},
+       {"0.625`"},
+       {"0.25`"},
+       {"4.3`"},
+       {"11.4`"},
+       {"8.1`"},
+       {"0.`"},
+       {"1.6`"},
+       {"0.`"},
+       {"0.`"},
+       {"13.5`"},
+       {"171"},
+       {"122"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Dwight Howard\"\>"},
+       {"\<\"29:13\"\>"},
+       {"0.573`"},
+       {"0.6`"},
+       {"0.`"},
+       {"1.1`"},
+       {"8.6`"},
+       {"34.4`"},
+       {"22.3`"},
+       {"14.`"},
+       {"1.6`"},
+       {"0.`"},
+       {"28.8`"},
+       {"31.8`"},
+       {"92"},
+       {"116"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Jeremy Lamb\"\>"},
+       {"\<\"23:19\"\>"},
+       {"0.606`"},
+       {"0.545`"},
+       {"0.364`"},
+       {"0.455`"},
+       {"0.`"},
+       {"19.1`"},
+       {"10.2`"},
+       {"11.9`"},
+       {"0.`"},
+       {"0.`"},
+       {"7.`"},
+       {"27.1`"},
+       {"121"},
+       {"124"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Michael Kidd-Gilchrist\"\>"},
+       {"\<\"7:25\"\>"},
+       {"0.`"},
+       {"0.`"},
+       {"0.`"},
+       {"0.`"},
+       {"0.`"},
+       {"15.1`"},
+       {"8.`"},
+       {"14.4`"},
+       {"0.`"},
+       {"0.`"},
+       {"0.`"},
+       {"12.`"},
+       {"36"},
+       {"125"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Reserves\"\>"},
+       {"\<\"MP\"\>"},
+       {"\<\"TS%\"\>"},
+       {"\<\"eFG%\"\>"},
+       {"\<\"3PAr\"\>"},
+       {"\<\"FTr\"\>"},
+       {"\<\"ORB%\"\>"},
+       {"\<\"DRB%\"\>"},
+       {"\<\"TRB%\"\>"},
+       {"\<\"AST%\"\>"},
+       {"\<\"STL%\"\>"},
+       {"\<\"BLK%\"\>"},
+       {"\<\"TOV%\"\>"},
+       {"\<\"USG%\"\>"},
+       {"\<\"ORtg\"\>"},
+       {"\<\"DRtg\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Frank Kaminsky\"\>"},
+       {"\<\"25:40\"\>"},
+       {"0.583`"},
+       {"0.556`"},
+       {"0.111`"},
+       {"0.111`"},
+       {"4.9`"},
+       {"8.7`"},
+       {"6.9`"},
+       {"21.`"},
+       {"0.`"},
+       {"0.`"},
+       {"9.6`"},
+       {"18.1`"},
+       {"126"},
+       {"126"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Treveon Graham\"\>"},
+       {"\<\"24:53\"\>"},
+       {"0.`"},
+       {"0.`"},
+       {"1.`"},
+       {"0.`"},
+       {"5.1`"},
+       {"4.5`"},
+       {"4.8`"},
+       {"21.4`"},
+       {"1.9`"},
+       {"0.`"},
+       {"50.`"},
+       {"3.6`"},
+       {"118"},
+       {"122"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Dwayne Bacon\"\>"},
+       {"\<\"24:29\"\>"},
+       {"0.53`"},
+       {"0.5`"},
+       {"0.222`"},
+       {"0.111`"},
+       {"0.`"},
+       {"18.2`"},
+       {"9.7`"},
+       {"5.3`"},
+       {"2.`"},
+       {"3.6`"},
+       {"0.`"},
+       {"17.2`"},
+       {"113"},
+       {"116"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Malik Monk\"\>"},
+       {"\<\"22:39\"\>"},
+       {"0.735`"},
+       {"0.735`"},
+       {"0.471`"},
+       {"0.`"},
+       {"0.`"},
+       {"9.9`"},
+       {"5.2`"},
+       {"8.9`"},
+       {"2.1`"},
+       {"0.`"},
+       {"0.`"},
+       {"33.4`"},
+       {"142"},
+       {"121"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Cody Zeller\"\>"},
+       {"\<\"18:43\"\>"},
+       {"0.51`"},
+       {"0.4`"},
+       {"0.`"},
+       {"0.4`"},
+       {"13.5`"},
+       {"35.8`"},
+       {"25.3`"},
+       {"6.4`"},
+       {"0.`"},
+       {"4.7`"},
+       {"14.5`"},
+       {"16.4`"},
+       {"113"},
+       {"116"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Johnny O'Bryant\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Marcus Paige\"\>"},
+       {"\<\"Did Not Play\"\>"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\<\"Team Totals\"\>"},
+       {"240"},
+       {"0.651`"},
+       {"0.619`"},
+       {"0.298`"},
+       {"0.345`"},
+       {"18.4`"},
+       {"79.1`"},
+       {"50.6`"},
+       {"46.7`"},
+       {"5.`"},
+       {"5.5`"},
+       {"10.2`"},
+       {"100.`"},
+       {"126.2`"},
+       {"121.2`"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{
+     "Starters", "MP", "FG", "FGA", "FG%", "3P", "3PA", "3P%", "FT", "FTA", 
+      "FT%", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", 
+      "+/-"}, {"Khris Middleton", "39:36", 15, 28, 0.536, 5, 11, 0.455, 8, 10,
+       0.8, 2, 3, 5, 7, 0, 0, 0, 4, 43, 1}, {
+     "Malcolm Brogdon", "37:28", 9, 16, 0.563, 2, 4, 0.5, 0, 1, 0., 0, 1, 1, 
+      4, 0, 0, 1, 5, 20, -16}, {
+     "Tony Snell", "37:21", 6, 7, 0.857, 5, 6, 0.833, 0, 0, 0, 2, 2, 3, 0, 0, 
+      1, 1, 17, 0}, {
+     "Giannis Antetokounmpo", "31:57", 5, 16, 0.313, 0, 2, 0., 4, 4, 1., 1, 
+      12, 13, 5, 2, 2, 3, 5, 14, 14}, {
+     "John Henson", "29:14", 2, 6, 0.333, 0, 1, 0., 0, 0, 4, 6, 10, 6, 1, 1, 
+      4, 5, 4, 12}, {
+     "Reserves", "MP", "FG", "FGA", "FG%", "3P", "3PA", "3P%", "FT", "FTA", 
+      "FT%", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", 
+      "+/-"}, {"Mirza Teletovic", "20:58", 4, 8, 0.5, 4, 6, 0.667, 0, 0, 1, 3,
+       4, 1, 0, 0, 1, 1, 12, -20}, {
+     "Thon Maker", "18:46", 2, 4, 0.5, 1, 2, 0.5, 0, 0, 0, 1, 1, 0, 0, 0, 2, 
+      3, 5, -17}, {
+     "Matthew Dellavedova", "18:02", 1, 3, 0.333, 1, 2, 0.5, 0, 0, 1, 2, 3, 3,
+       0, 0, 1, 1, 3, -3}, {
+     "DeAndre Liggins", "6:38", 1, 3, 0.333, 1, 2, 0.5, 0, 0, 0, 1, 1, 0, 0, 
+      0, 1, 0, 3, 4}, {"Sterling Brown", "Did Not Play"}, {
+     "D.J. Wilson", "Did Not Play"}, {"Jason Terry", "Did Not Play"}, {
+     "Rashad Vaughn", "Did Not Play"}, {
+     "Team Totals", 240, 45, 91, 0.495, 19, 36, 0.528, 12, 15, 0.8, 9, 31, 40,
+       29, 3, 3, 14, 25, 121}}, {{
+     "Starters", "MP", "TS%", "eFG%", "3PAr", "FTr", "ORB%", "DRB%", "TRB%", 
+      "AST%", "STL%", "BLK%", "TOV%", "USG%", "ORtg", "DRtg"}, {
+     "Khris Middleton", "39:36", 0.664, 0.625, 0.393, 0.357, 5.6, 9.6, 7.5, 
+      31.6, 0., 0., 0., 35.2, 146, 130}, {
+     "Malcolm Brogdon", "37:28", 0.608, 0.625, 0.25, 0.063, 0., 3.4, 1.6, 
+      15.3, 0., 0., 5.7, 20., 121, 131}, {
+     "Tony Snell", "37:21", 1.214, 1.214, 0.857, 0., 0., 6.8, 3.2, 10.3, 0., 
+      0., 12.5, 9.2, 192, 130}, {
+     "Giannis Antetokounmpo", "31:57", 0.394, 0.313, 0.125, 0.25, 3.5, 47.4, 
+      24.1, 20., 3., 5.1, 14.5, 27.9, 88, 113}, {
+     "John Henson", "29:14", 0.333, 0.333, 0.167, 0., 15.3, 25.9, 20.3, 23.6, 
+      1.6, 2.8, 40., 14.7, 92, 121}, {
+     "Reserves", "MP", "TS%", "eFG%", "3PAr", "FTr", "ORB%", "DRB%", "TRB%", 
+      "AST%", "STL%", "BLK%", "TOV%", "USG%", "ORtg", "DRtg"}, {
+     "Mirza Teletovic", "20:58", 0.75, 0.75, 0.75, 0., 5.3, 18.1, 11.3, 6.4, 
+      0., 0., 11.1, 18.5, 130, 129}, {
+     "Thon Maker", "18:46", 0.625, 0.625, 0.5, 0., 0., 6.7, 3.2, 0., 0., 0., 
+      33.3, 13.8, 72, 130}, {
+     "Matthew Dellavedova", "18:02", 0.5, 0.5, 0.667, 0., 6.2, 14., 9.9, 18.9,
+       0., 0., 25., 9.5, 116, 129}, {
+     "DeAndre Liggins", "6:38", 0.5, 0.5, 0.667, 0., 0., 19., 8.9, 0., 0., 0.,
+       25., 25.9, 69, 129}, {"Jason Terry", "Did Not Play"}, {
+     "D.J. Wilson", "Did Not Play"}, {"Sterling Brown", "Did Not Play"}, {
+     "Rashad Vaughn", "Did Not Play"}, {
+     "Team Totals", 240, 0.62, 0.599, 0.396, 0.165, 20.9, 81.6, 49.4, 64.4, 
+      3., 5.1, 12.5, 100., 121.2, 126.2}}, {{
+     "Starters", "MP", "FG", "FGA", "FG%", "3P", "3PA", "3P%", "FT", "FTA", 
+      "FT%", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", 
+      "+/-"}, {"Kemba Walker", "34:18", 8, 12, 0.667, 3, 4, 0.75, 7, 7, 1., 0,
+       2, 2, 3, 0, 1, 1, 0, 26, -8}, {
+     "Marvin Williams", "29:21", 5, 8, 0.625, 3, 5, 0.6, 2, 2, 1., 1, 3, 4, 0,
+       1, 0, 0, 0, 15, -11}, {
+     "Dwight Howard", "29:13", 6, 10, 0.6, 0, 0, 5, 11, 0.455, 2, 9, 11, 3, 1,
+       0, 6, 4, 17, -11}, {
+     "Jeremy Lamb", "23:19", 5, 11, 0.455, 2, 4, 0.5, 4, 5, 0.8, 0, 4, 4, 2, 
+      0, 0, 1, 0, 16, -2}, {
+     "Michael Kidd-Gilchrist", "7:25", 0, 2, 0., 0, 0, 0, 0, 0, 1, 1, 1, 0, 0,
+       0, 1, 0, -2}, {
+     "Reserves", "MP", "FG", "FGA", "FG%", "3P", "3PA", "3P%", "FT", "FTA", 
+      "FT%", "ORB", "DRB", "TRB", "AST", "STL", "BLK", "TOV", "PF", "PTS", 
+      "+/-"}, {"Frank Kaminsky", "25:40", 5, 9, 0.556, 0, 1, 0., 1, 1, 1., 1, 
+      2, 3, 4, 0, 0, 1, 0, 11, 18}, {
+     "Treveon Graham", "24:53", 0, 1, 0., 0, 1, 0., 0, 0, 1, 1, 2, 5, 1, 0, 1,
+       6, 0, 16}, {
+     "Dwayne Bacon", "24:29", 4, 9, 0.444, 1, 2, 0.5, 1, 1, 1., 0, 4, 4, 1, 1,
+       1, 0, 5, 10, 5}, {
+     "Malik Monk", "22:39", 10, 17, 0.588, 5, 8, 0.625, 0, 0, 0, 2, 2, 1, 1, 
+      0, 0, 1, 25, 6}, {
+     "Cody Zeller", "18:43", 2, 5, 0.4, 0, 0, 2, 2, 1., 2, 6, 8, 1, 0, 1, 1, 
+      1, 6, 14}, {"Johnny O'Bryant", "Did Not Play"}, {
+     "Marcus Paige", "Did Not Play"}, {
+     "Team Totals", 240, 45, 84, 0.536, 14, 25, 0.56, 22, 29, 0.759, 7, 34, 
+      41, 21, 5, 3, 11, 18, 126}}, {{
+     "Starters", "MP", "TS%", "eFG%", "3PAr", "FTr", "ORB%", "DRB%", "TRB%", 
+      "AST%", "STL%", "BLK%", "TOV%", "USG%", "ORtg", "DRtg"}, {
+     "Kemba Walker", "34:18", 0.862, 0.792, 0.333, 0.583, 0., 6.5, 3.5, 12.4, 
+      0., 2.5, 6.2, 20.9, 167, 125}, {
+     "Marvin Williams", "29:21", 0.845, 0.813, 0.625, 0.25, 4.3, 11.4, 8.1, 
+      0., 1.6, 0., 0., 13.5, 171, 122}, {
+     "Dwight Howard", "29:13", 0.573, 0.6, 0., 1.1, 8.6, 34.4, 22.3, 14., 1.6,
+       0., 28.8, 31.8, 92, 116}, {
+     "Jeremy Lamb", "23:19", 0.606, 0.545, 0.364, 0.455, 0., 19.1, 10.2, 11.9,
+       0., 0., 7., 27.1, 121, 124}, {
+     "Michael Kidd-Gilchrist", "7:25", 0., 0., 0., 0., 0., 15.1, 8., 14.4, 0.,
+       0., 0., 12., 36, 125}, {
+     "Reserves", "MP", "TS%", "eFG%", "3PAr", "FTr", "ORB%", "DRB%", "TRB%", 
+      "AST%", "STL%", "BLK%", "TOV%", "USG%", "ORtg", "DRtg"}, {
+     "Frank Kaminsky", "25:40", 0.583, 0.556, 0.111, 0.111, 4.9, 8.7, 6.9, 
+      21., 0., 0., 9.6, 18.1, 126, 126}, {
+     "Treveon Graham", "24:53", 0., 0., 1., 0., 5.1, 4.5, 4.8, 21.4, 1.9, 0., 
+      50., 3.6, 118, 122}, {
+     "Dwayne Bacon", "24:29", 0.53, 0.5, 0.222, 0.111, 0., 18.2, 9.7, 5.3, 2.,
+       3.6, 0., 17.2, 113, 116}, {
+     "Malik Monk", "22:39", 0.735, 0.735, 0.471, 0., 0., 9.9, 5.2, 8.9, 2.1, 
+      0., 0., 33.4, 142, 121}, {
+     "Cody Zeller", "18:43", 0.51, 0.4, 0., 0.4, 13.5, 35.8, 25.3, 6.4, 0., 
+      4.7, 14.5, 16.4, 113, 116}, {"Johnny O'Bryant", "Did Not Play"}, {
+     "Marcus Paige", "Did Not Play"}, {
+     "Team Totals", 240, 0.651, 0.619, 0.298, 0.345, 18.4, 79.1, 50.6, 46.7, 
+      5., 5.5, 10.2, 100., 126.2, 121.2}}}]]], "Output",
+ CellChangeTimes->{3.721140733821103*^9, 
+  3.721141074462612*^9},ExpressionUUID->"8d7443a6-c1be-4e89-bec0-\
+853b68977bc3"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Building the model", "Section",
+ CellChangeTimes->{{3.721140840338415*^9, 
+  3.721140844864628*^9}},ExpressionUUID->"1875c6a6-3882-4bdf-92b2-\
+35b97cd2cc7b"],
+
+Cell[BoxData[
+ RowBox[{"(*", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+   "Get", " ", "last", " ", "5", " ", "data", " ", "weighted", " ", "avg"}], 
+   ","}], " ", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "*)"}]], "Input",
+ CellChangeTimes->{{3.7211412859643583`*^9, 3.721141321808104*^9}, {
+  3.7211414217298183`*^9, 3.721141421833482*^9}, {3.72114154134684*^9, 
+  3.721141541962944*^9}},ExpressionUUID->"848dc077-8cc5-45fd-83fb-\
+ecb69b305252"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.721141742599605*^9, 3.721141838485828*^9}, 
+   3.721141921438143*^9},ExpressionUUID->"25f4fade-984b-4b39-9f71-\
+6b6a6053dcc6"],
+
+Cell[BoxData["16"], "Output",
+ CellChangeTimes->{{3.721141771200819*^9, 
+  3.721141838923985*^9}},ExpressionUUID->"44659127-439f-4bb4-9052-\
+97c685164d57"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"tt", " ", "=", " ", 
+  RowBox[{
+   RowBox[{"Position", "[", 
+    RowBox[{
+     RowBox[{"gamestats", "[", 
+      RowBox[{"[", 
+       RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "\"\<Team Totals\>\""}], 
+    "]"}], "[", 
+   RowBox[{"[", 
+    RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"gamestats", "[", 
+  RowBox[{"[", 
+   RowBox[{"1", ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "2"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"1", ",", "tt"}], "}"}]}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.721141845262618*^9, 3.7211418456294622`*^9}, {
+  3.721141886694083*^9, 
+  3.7211419240290527`*^9}},ExpressionUUID->"2d39c522-e1b2-43f6-b883-\
+dcdceaf41083"],
+
+Cell[BoxData["16"], "Output",
+ CellChangeTimes->{
+  3.721141845877253*^9, {3.721141891997136*^9, 
+   3.721141924968665*^9}},ExpressionUUID->"c0f521f9-8694-454e-90bd-\
+65cbd6a8646a"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"Starters\"\>", ",", "\<\"MP\"\>", ",", "\<\"FG\"\>", 
+       ",", "\<\"FGA\"\>", ",", "\<\"FG%\"\>", ",", "\<\"3P\"\>", 
+       ",", "\<\"3PA\"\>", ",", "\<\"3P%\"\>", ",", "\<\"FT\"\>", 
+       ",", "\<\"FTA\"\>", ",", "\<\"FT%\"\>", ",", "\<\"ORB\"\>", 
+       ",", "\<\"DRB\"\>", ",", "\<\"TRB\"\>", ",", "\<\"AST\"\>", 
+       ",", "\<\"STL\"\>", ",", "\<\"BLK\"\>", ",", "\<\"TOV\"\>", 
+       ",", "\<\"PF\"\>", ",", "\<\"PTS\"\>", ",", "\<\"+/-\"\>"}], "}"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Team Totals\"\>", ",", "240", ",", "35", ",", "81", ",", 
+       "0.432`", ",", "6", ",", "20", ",", "0.3`", ",", "10", ",", "12", ",", 
+       "0.833`", ",", "7", ",", "19", ",", "26", ",", "24", ",", "10", ",", 
+       "5", ",", "15", ",", "18", ",", "86"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"Starters\"\>", ",", "\<\"MP\"\>", ",", "\<\"TS%\"\>", 
+       ",", "\<\"eFG%\"\>", ",", "\<\"3PAr\"\>", ",", "\<\"FTr\"\>", 
+       ",", "\<\"ORB%\"\>", ",", "\<\"DRB%\"\>", ",", "\<\"TRB%\"\>", 
+       ",", "\<\"AST%\"\>", ",", "\<\"STL%\"\>", ",", "\<\"BLK%\"\>", 
+       ",", "\<\"TOV%\"\>", ",", "\<\"USG%\"\>", ",", "\<\"ORtg\"\>", 
+       ",", "\<\"DRtg\"\>"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"\<\"Team Totals\"\>", ",", "240", ",", "0.498`", ",", "0.469`",
+        ",", "0.247`", ",", "0.148`", ",", "16.3`", ",", "54.3`", ",", 
+       "33.3`", ",", "68.6`", ",", "11.2`", ",", "12.2`", ",", "14.8`", ",", 
+       "100.`", ",", "96.7`", ",", "127.1`"}], "}"}]}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{
+  3.721141845877253*^9, {3.721141891997136*^9, 
+   3.721141924975844*^9}},ExpressionUUID->"18f12a59-fe2a-4da7-8e60-\
+9f3aeb0306c9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"gamestats", "[", 
+  RowBox[{"[", 
+   RowBox[{"1", ",", "2", ",", "1"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.721141901557929*^9, 
+  3.721141901667935*^9}},ExpressionUUID->"697f1cf5-42d2-42ec-9990-\
+04eab0238c5c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Starters\"\>", ",", "\<\"MP\"\>", ",", "\<\"TS%\"\>", 
+   ",", "\<\"eFG%\"\>", ",", "\<\"3PAr\"\>", ",", "\<\"FTr\"\>", 
+   ",", "\<\"ORB%\"\>", ",", "\<\"DRB%\"\>", ",", "\<\"TRB%\"\>", 
+   ",", "\<\"AST%\"\>", ",", "\<\"STL%\"\>", ",", "\<\"BLK%\"\>", 
+   ",", "\<\"TOV%\"\>", ",", "\<\"USG%\"\>", ",", "\<\"ORtg\"\>", 
+   ",", "\<\"DRtg\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{{3.721141898432061*^9, 
+  3.7211419020151443`*^9}},ExpressionUUID->"7b744091-8b2d-4cf4-afea-\
+d3e2c49e9c57"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"teamnamesNo3lc", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.721141641970538*^9, 
+  3.7211416487208033`*^9}},ExpressionUUID->"a6b51371-8e86-49ed-8c0d-\
+0c535053fda6"],
+
+Cell[BoxData["\<\"Atlanta Hawks\"\>"], "Output",
+ CellChangeTimes->{3.72114164918664*^9, 
+  3.721141688021243*^9},ExpressionUUID->"6dbd6a57-6ab6-4487-a81b-\
+0299e9da5072"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{"outcomes", ",", 
+   RowBox[{"teamnamesNo3lc", "[", 
+    RowBox[{"[", "1", "]"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.721141693513927*^9, 3.721141714005623*^9}, {
+  3.721141949864791*^9, 
+  3.721141957262978*^9}},ExpressionUUID->"5f79d646-1692-4680-898b-\
+64de227e6f14"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"10", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"15", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"32", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"42", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"67", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"83", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"91", ",", "1"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"100", ",", "3"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.721141707458604*^9, 3.721141714456751*^9}, {
+  3.721141950898859*^9, 
+  3.7211419579749107`*^9}},ExpressionUUID->"4e3be1de-a288-4f0f-a523-\
+5985ff65d985"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["outcomes"], "Input",
+ CellChangeTimes->{{3.7211410811319237`*^9, 3.721141085652603*^9}, {
+  3.721141140590567*^9, 
+  3.721141141229911*^9}},ExpressionUUID->"41efd9d7-99ea-4ccf-9816-\
+03d52821e33b"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Sacramento Kings\"\>", ",", "86", 
+     ",", "\<\"Boston Celtics\"\>", ",", "113"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Milwaukee Bucks\"\>", ",", "121", 
+     ",", "\<\"Charlotte Hornets\"\>", ",", "126"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Indiana Pacers\"\>", ",", "124", 
+     ",", "\<\"Cleveland Cavaliers\"\>", ",", "107"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Toronto Raptors\"\>", ",", "111", 
+     ",", "\<\"Denver Nuggets\"\>", ",", "129"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Dallas Mavericks\"\>", ",", "98", 
+     ",", "\<\"Los Angeles Clippers\"\>", ",", "119"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Orlando Magic\"\>", ",", "101", 
+     ",", "\<\"Memphis Grizzlies\"\>", ",", "99"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Chicago Bulls\"\>", ",", "91", ",", "\<\"Miami Heat\"\>", 
+     ",", "97"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Minnesota Timberwolves\"\>", ",", "104", 
+     ",", "\<\"New Orleans Pelicans\"\>", ",", "98"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Houston Rockets\"\>", ",", "119", 
+     ",", "\<\"New York Knicks\"\>", ",", "97"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Atlanta Hawks\"\>", ",", "109", 
+     ",", "\<\"Philadelphia 76ers\"\>", ",", "119"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Portland Trail Blazers\"\>", ",", "103", 
+     ",", "\<\"Utah Jazz\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Phoenix Suns\"\>", ",", "122", 
+     ",", "\<\"Washington Wizards\"\>", ",", "116"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Los Angeles Lakers\"\>", ",", "110", 
+     ",", "\<\"Portland Trail Blazers\"\>", ",", "113"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Golden State Warriors\"\>", ",", "112", 
+     ",", "\<\"San Antonio Spurs\"\>", ",", "92"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Houston Rockets\"\>", ",", "119", 
+     ",", "\<\"Atlanta Hawks\"\>", ",", "104"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"New Orleans Pelicans\"\>", ",", "99", 
+     ",", "\<\"Dallas Mavericks\"\>", ",", "94"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Miami Heat\"\>", ",", "94", ",", "\<\"Denver Nuggets\"\>", 
+     ",", "95"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Milwaukee Bucks\"\>", ",", "96", 
+     ",", "\<\"Detroit Pistons\"\>", ",", "105"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Brooklyn Nets\"\>", ",", "112", 
+     ",", "\<\"Los Angeles Lakers\"\>", ",", "124"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Phoenix Suns\"\>", ",", "107", 
+     ",", "\<\"New York Knicks\"\>", ",", "120"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Boston Celtics\"\>", ",", "101", 
+     ",", "\<\"Oklahoma City Thunder\"\>", ",", "94"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Chicago Bulls\"\>", ",", "105", ",", "\<\"Orlando Magic\"\>",
+      ",", "83"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Indiana Pacers\"\>", ",", "110", 
+     ",", "\<\"Philadelphia 76ers\"\>", ",", "121"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Charlotte Hornets\"\>", ",", "101", 
+     ",", "\<\"San Antonio Spurs\"\>", ",", "108"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Toronto Raptors\"\>", ",", "109", ",", "\<\"Utah Jazz\"\>", 
+     ",", "100"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Cleveland Cavaliers\"\>", ",", "130", 
+     ",", "\<\"Washington Wizards\"\>", ",", "122"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"New Orleans Pelicans\"\>", ",", "96", 
+     ",", "\<\"Chicago Bulls\"\>", ",", "90"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Golden State Warriors\"\>", ",", "127", 
+     ",", "\<\"Denver Nuggets\"\>", ",", "108"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Sacramento Kings\"\>", ",", "99", 
+     ",", "\<\"Detroit Pistons\"\>", ",", "108"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Memphis Grizzlies\"\>", ",", "113", 
+     ",", "\<\"Los Angeles Clippers\"\>", ",", "104"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Dallas Mavericks\"\>", ",", "99", 
+     ",", "\<\"Minnesota Timberwolves\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Atlanta Hawks\"\>", ",", "117", 
+     ",", "\<\"Cleveland Cavaliers\"\>", ",", "115"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Utah Jazz\"\>", ",", "110", ",", "\<\"Houston Rockets\"\>", 
+     ",", "137"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Miami Heat\"\>", ",", "104", 
+     ",", "\<\"Los Angeles Clippers\"\>", ",", "101"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Memphis Grizzlies\"\>", ",", "102", 
+     ",", "\<\"Los Angeles Lakers\"\>", ",", "107"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Charlotte Hornets\"\>", ",", "94", 
+     ",", "\<\"Minnesota Timberwolves\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Indiana Pacers\"\>", ",", "101", 
+     ",", "\<\"New York Knicks\"\>", ",", "108"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Boston Celtics\"\>", ",", "104", 
+     ",", "\<\"Orlando Magic\"\>", ",", "88"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Oklahoma City Thunder\"\>", ",", "99", 
+     ",", "\<\"Portland Trail Blazers\"\>", ",", "103"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Phoenix Suns\"\>", ",", "95", 
+     ",", "\<\"San Antonio Spurs\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Washington Wizards\"\>", ",", "107", 
+     ",", "\<\"Toronto Raptors\"\>", ",", "96"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Boston Celtics\"\>", ",", "110", 
+     ",", "\<\"Atlanta Hawks\"\>", ",", "107"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Miami Heat\"\>", ",", "80", 
+     ",", "\<\"Golden State Warriors\"\>", ",", "97"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Brooklyn Nets\"\>", ",", "98", ",", "\<\"Phoenix Suns\"\>", 
+     ",", "92"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Milwaukee Bucks\"\>", ",", "119", 
+     ",", "\<\"Cleveland Cavaliers\"\>", ",", "124"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Brooklyn Nets\"\>", ",", "104", 
+     ",", "\<\"Denver Nuggets\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"New Orleans Pelicans\"\>", ",", "117", 
+     ",", "\<\"Indiana Pacers\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Charlotte Hornets\"\>", ",", "113", 
+     ",", "\<\"New York Knicks\"\>", ",", "118"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Memphis Grizzlies\"\>", ",", "98", 
+     ",", "\<\"Portland Trail Blazers\"\>", ",", "97"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Oklahoma City Thunder\"\>", ",", "86", 
+     ",", "\<\"Sacramento Kings\"\>", ",", "94"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Los Angeles Clippers\"\>", ",", "107", 
+     ",", "\<\"San Antonio Spurs\"\>", ",", "120"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Chicago Bulls\"\>", ",", "114", 
+     ",", "\<\"Toronto Raptors\"\>", ",", "119"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Philadelphia 76ers\"\>", ",", "104", 
+     ",", "\<\"Utah Jazz\"\>", ",", "97"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Dallas Mavericks\"\>", ",", "113", 
+     ",", "\<\"Washington Wizards\"\>", ",", "99"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Los Angeles Lakers\"\>", ",", "96", 
+     ",", "\<\"Boston Celtics\"\>", ",", "107"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Indiana Pacers\"\>", ",", "97", 
+     ",", "\<\"Detroit Pistons\"\>", ",", "114"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Minnesota Timberwolves\"\>", ",", "101", 
+     ",", "\<\"Golden State Warriors\"\>", ",", "125"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"New York Knicks\"\>", ",", "99", 
+     ",", "\<\"Orlando Magic\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Miami Heat\"\>", ",", "126", ",", "\<\"Phoenix Suns\"\>", 
+     ",", "115"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Oklahoma City Thunder\"\>", ",", "94", 
+     ",", "\<\"Denver Nuggets\"\>", ",", "102"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Cleveland Cavaliers\"\>", ",", "113", 
+     ",", "\<\"Houston Rockets\"\>", ",", "117"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Philadelphia 76ers\"\>", ",", "108", 
+     ",", "\<\"Sacramento Kings\"\>", ",", "109"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"New Orleans Pelicans\"\>", ",", "118", 
+     ",", "\<\"Toronto Raptors\"\>", ",", "122"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Los Angeles Lakers\"\>", ",", "95", 
+     ",", "\<\"Washington Wizards\"\>", ",", "111"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Charlotte Hornets\"\>", ",", "87", 
+     ",", "\<\"Boston Celtics\"\>", ",", "90"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Indiana Pacers\"\>", ",", "105", 
+     ",", "\<\"Chicago Bulls\"\>", ",", "87"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Atlanta Hawks\"\>", ",", "104", 
+     ",", "\<\"Detroit Pistons\"\>", ",", "111"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Los Angeles Clippers\"\>", ",", "111", 
+     ",", "\<\"Oklahoma City Thunder\"\>", ",", "120"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Orlando Magic\"\>", ",", "128", ",", "\<\"Phoenix Suns\"\>", 
+     ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Brooklyn Nets\"\>", ",", "101", 
+     ",", "\<\"Portland Trail Blazers\"\>", ",", "97"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Milwaukee Bucks\"\>", ",", "94", 
+     ",", "\<\"San Antonio Spurs\"\>", ",", "87"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Miami Heat\"\>", ",", "84", ",", "\<\"Utah Jazz\"\>", ",", 
+     "74"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Cleveland Cavaliers\"\>", ",", "111", 
+     ",", "\<\"Dallas Mavericks\"\>", ",", "104"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Orlando Magic\"\>", ",", "107", 
+     ",", "\<\"Denver Nuggets\"\>", ",", "125"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Philadelphia 76ers\"\>", ",", "114", 
+     ",", "\<\"Golden State Warriors\"\>", ",", "135"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Memphis Grizzlies\"\>", ",", "96", 
+     ",", "\<\"Houston Rockets\"\>", ",", "111"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Los Angeles Lakers\"\>", ",", "90", 
+     ",", "\<\"Milwaukee Bucks\"\>", ",", "98"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Los Angeles Clippers\"\>", ",", "103", 
+     ",", "\<\"New Orleans Pelicans\"\>", ",", "111"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Sacramento Kings\"\>", ",", "91", 
+     ",", "\<\"New York Knicks\"\>", ",", "118"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Minnesota Timberwolves\"\>", ",", "110", 
+     ",", "\<\"Phoenix Suns\"\>", ",", "118"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Chicago Bulls\"\>", ",", "94", 
+     ",", "\<\"San Antonio Spurs\"\>", ",", "133"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Brooklyn Nets\"\>", ",", "106", ",", "\<\"Utah Jazz\"\>", 
+     ",", "114"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Atlanta Hawks\"\>", ",", "94", 
+     ",", "\<\"Washington Wizards\"\>", ",", "113"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Toronto Raptors\"\>", ",", "94", 
+     ",", "\<\"Boston Celtics\"\>", ",", "95"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Miami Heat\"\>", ",", "103", ",", "\<\"Detroit Pistons\"\>", 
+     ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Houston Rockets\"\>", ",", "118", 
+     ",", "\<\"Indiana Pacers\"\>", ",", "95"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Dallas Mavericks\"\>", ",", "99", 
+     ",", "\<\"Oklahoma City Thunder\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Orlando Magic\"\>", ",", "100", 
+     ",", "\<\"Golden State Warriors\"\>", ",", "110"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Philadelphia 76ers\"\>", ",", "109", 
+     ",", "\<\"Los Angeles Clippers\"\>", ",", "105"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Memphis Grizzlies\"\>", ",", "103", 
+     ",", "\<\"Milwaukee Bucks\"\>", ",", "110"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Atlanta Hawks\"\>", ",", "105", 
+     ",", "\<\"New Orleans Pelicans\"\>", ",", "106"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Cleveland Cavaliers\"\>", ",", "104", 
+     ",", "\<\"New York Knicks\"\>", ",", "101"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Los Angeles Lakers\"\>", ",", "100", 
+     ",", "\<\"Phoenix Suns\"\>", ",", "93"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Denver Nuggets\"\>", ",", "82", 
+     ",", "\<\"Portland Trail Blazers\"\>", ",", "99"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Minnesota Timberwolves\"\>", ",", "109", 
+     ",", "\<\"Utah Jazz\"\>", ",", "98"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Sacramento Kings\"\>", ",", "92", 
+     ",", "\<\"Washington Wizards\"\>", ",", "110"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Boston Celtics\"\>", ",", "109", 
+     ",", "\<\"Brooklyn Nets\"\>", ",", "102"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"San Antonio Spurs\"\>", ",", "97", 
+     ",", "\<\"Dallas Mavericks\"\>", ",", "91"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Toronto Raptors\"\>", ",", "129", 
+     ",", "\<\"Houston Rockets\"\>", ",", "113"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Sacramento Kings\"\>", ",", "80", 
+     ",", "\<\"Atlanta Hawks\"\>", ",", "126"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Cleveland Cavaliers\"\>", ",", "115", 
+     ",", "\<\"Charlotte Hornets\"\>", ",", "107"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Philadelphia 76ers\"\>", ",", "115", 
+     ",", "\<\"Los Angeles Lakers\"\>", ",", "109"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Indiana Pacers\"\>", ",", "116", 
+     ",", "\<\"Memphis Grizzlies\"\>", ",", "113"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Washington Wizards\"\>", ",", "102", 
+     ",", "\<\"Miami Heat\"\>", ",", "93"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Detroit Pistons\"\>", ",", "95", 
+     ",", "\<\"Milwaukee Bucks\"\>", ",", "99"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"San Antonio Spurs\"\>", ",", "86", 
+     ",", "\<\"Minnesota Timberwolves\"\>", ",", "98"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Toronto Raptors\"\>", ",", "125", 
+     ",", "\<\"New Orleans Pelicans\"\>", ",", "116"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Utah Jazz\"\>", ",", "101", ",", "\<\"New York Knicks\"\>", 
+     ",", "106"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Chicago Bulls\"\>", ",", "79", 
+     ",", "\<\"Oklahoma City Thunder\"\>", ",", "92"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Orlando Magic\"\>", ",", "94", 
+     ",", "\<\"Portland Trail Blazers\"\>", ",", "99"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Golden State Warriors\"\>", ",", "88", 
+     ",", "\<\"Boston Celtics\"\>", ",", "92"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Houston Rockets\"\>", ",", "142", 
+     ",", "\<\"Phoenix Suns\"\>", ",", "116"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Utah Jazz\"\>", ",", "107", ",", "\<\"Brooklyn Nets\"\>", 
+     ",", "118"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.721141141668618*^9},ExpressionUUID->"e40dcd7b-4982-4940-8114-\
+74d90e8b57e3"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{843, 640},
+WindowMargins->{{26, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 193, 4, 32, "Input", "ExpressionUUID" -> \
+"dfabad77-c71b-4a63-a55a-cac7694495f5"],
+Cell[CellGroupData[{
+Cell[776, 28, 195, 3, 64, "Section", "ExpressionUUID" -> \
+"a6e3080e-b4ab-4230-8daa-489e72e1b1a9"],
+Cell[974, 33, 1325, 34, 138, "Input", "ExpressionUUID" -> \
+"5e735b6f-f76c-4167-81b9-dd7a0fbf605d"],
+Cell[CellGroupData[{
+Cell[2324, 71, 154, 3, 32, "Input", "ExpressionUUID" -> \
+"a169bb2e-7907-400d-b904-137e4a0420dd"],
+Cell[2481, 76, 165, 3, 32, "Output", "ExpressionUUID" -> \
+"c7636d84-e937-4f8c-b162-4ceedcc70fef"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2683, 84, 482, 10, 54, "Input", "ExpressionUUID" -> \
+"86320de5-a6de-4f44-a1a1-ed0364edc65d"],
+Cell[3168, 96, 403, 6, 32, "Output", "ExpressionUUID" -> \
+"e0da73ad-7e5a-4c0f-bd16-7c72eefefa3f"]
+}, Open  ]],
+Cell[3586, 105, 2441, 47, 264, "Input", "ExpressionUUID" -> \
+"b2de68e6-124d-4441-8222-57aaaa6490b0"],
+Cell[6030, 154, 376, 8, 32, "Input", "ExpressionUUID" -> \
+"75411062-f313-4bc6-9507-e7129d6e1e19"],
+Cell[6409, 164, 4707, 107, 516, "Input", "ExpressionUUID" -> \
+"da53dcfa-6e16-4aeb-9e03-244f77a09cb3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11153, 276, 184, 3, 64, "Section", "ExpressionUUID" -> \
+"d6d7af99-c8bd-4731-b3dc-4caeec0623f8"],
+Cell[11340, 281, 3597, 82, 474, "Input", "ExpressionUUID" -> \
+"2f40f2d7-e398-4fd9-a5ff-494fbe8a2e44"],
+Cell[14940, 365, 377, 10, 32, "Input", "ExpressionUUID" -> \
+"4b800d91-3c7d-426c-a318-dac5cd5e801b"],
+Cell[CellGroupData[{
+Cell[15342, 379, 252, 6, 32, "Input", "ExpressionUUID" -> \
+"d8064074-3e25-4afe-8c16-85bae99fe0fa"],
+Cell[15597, 387, 51800, 1752, 1012, "Output", "ExpressionUUID" -> \
+"8d7443a6-c1be-4e89-bec0-853b68977bc3"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[67446, 2145, 163, 3, 64, "Section", "ExpressionUUID" -> \
+"1875c6a6-3882-4bdf-92b2-35b97cd2cc7b"],
+Cell[67612, 2150, 482, 10, 117, "Input", "ExpressionUUID" -> \
+"848dc077-8cc5-45fd-83fb-ecb69b305252"],
+Cell[CellGroupData[{
+Cell[68119, 2164, 175, 3, 32, "Input", "ExpressionUUID" -> \
+"25f4fade-984b-4b39-9f71-6b6a6053dcc6"],
+Cell[68297, 2169, 155, 3, 32, "Output", "ExpressionUUID" -> \
+"44659127-439f-4bb4-9052-97c685164d57"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68489, 2177, 719, 21, 54, "Input", "ExpressionUUID" -> \
+"2d39c522-e1b2-43f6-b883-dcdceaf41083"],
+Cell[69211, 2200, 181, 4, 32, "Output", "ExpressionUUID" -> \
+"c0f521f9-8694-454e-90bd-65cbd6a8646a"],
+Cell[69395, 2206, 1842, 37, 138, "Output", "ExpressionUUID" -> \
+"18f12a59-fe2a-4da7-8e60-9f3aeb0306c9"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[71274, 2248, 245, 6, 32, "Input", "ExpressionUUID" -> \
+"697f1cf5-42d2-42ec-9990-04eab0238c5c"],
+Cell[71522, 2256, 537, 10, 32, "Output", "ExpressionUUID" -> \
+"7b744091-8b2d-4cf4-afea-d3e2c49e9c57"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72096, 2271, 218, 5, 32, "Input", "ExpressionUUID" -> \
+"a6b51371-8e86-49ed-8c0d-0c535053fda6"],
+Cell[72317, 2278, 171, 3, 32, "Output", "ExpressionUUID" -> \
+"6dbd6a57-6ab6-4487-a81b-0299e9da5072"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[72525, 2286, 333, 8, 32, "Input", "ExpressionUUID" -> \
+"5f79d646-1692-4680-898b-64de227e6f14"],
+Cell[72861, 2296, 711, 22, 32, "Output", "ExpressionUUID" -> \
+"4e3be1de-a288-4f0f-a523-5985ff65d985"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[73609, 2323, 211, 4, 32, "Input", "ExpressionUUID" -> \
+"41efd9d7-99ea-4ccf-9816-03d52821e33b"],
+Cell[73823, 2329, 15317, 344, 1713, "Output", "ExpressionUUID" -> \
+"e40dcd7b-4982-4940-8114-74d90e8b57e3"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
