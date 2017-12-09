@@ -1,0 +1,410 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16988,        402]
+NotebookOptionsPosition[     15702,        366]
+NotebookOutlinePosition[     16086,        383]
+CellTagsIndexPosition[     16043,        380]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Writing", " ", "ESPN", " ", "Game", " ", "ids"}], "*)"}]], "Input",\
+
+ CellChangeTimes->{{3.721843408775076*^9, 3.721843412370109*^9}, {
+  3.7218461746317167`*^9, 
+  3.7218461817187767`*^9}},ExpressionUUID->"520fcd27-5837-4314-971c-\
+4130260ad501"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"espnNBAseasonindexbounds", " ", "=", " ", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\"\<2018\>\"", ",", "400974437", ",", "400975976"}], "}"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<2017\>\"", ",", "400899375", ",", "400900608"}], "}"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<2016\>\"", ",", "400827888", ",", "400829117"}], "}"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<2015\>\"", ",", "400578293", ",", "400579522"}], "}"}], 
+     ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"\"\<2014\>\"", ",", "400488874", ",", "400490103"}], "}"}]}], 
+    "\[IndentingNewLine]", "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7218446560181503`*^9, 3.721844663863289*^9}, 
+   3.72184494807698*^9, {3.7218450502417383`*^9, 3.721845097286427*^9}, {
+   3.721845183725534*^9, 3.721845187826684*^9}, {3.721845222583024*^9, 
+   3.721845235298753*^9}, {3.7218453028975353`*^9, 3.721845306321402*^9}, {
+   3.721845364504986*^9, 3.7218453646900377`*^9}, 3.721845645339463*^9, {
+   3.7218457720240707`*^9, 3.721845779025229*^9}, 3.721845875832754*^9, {
+   3.7218459299113283`*^9, 3.721845949242375*^9}, 3.721845988949835*^9, 
+   3.7218460819391813`*^9, {3.721846317728763*^9, 3.72184635398321*^9}, {
+   3.721846761762306*^9, 
+   3.721846763144161*^9}},ExpressionUUID->"ee684b90-c6ba-4d58-8e92-\
+0d56528ca142"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Differences", "[", 
+  RowBox[{"espnNBAseasonindexbounds", "[", 
+   RowBox[{"[", 
+    RowBox[{"1", ",", 
+     RowBox[{"2", ";;"}]}], "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Differences", "[", 
+  RowBox[{"espnNBAseasonindexbounds", "[", 
+   RowBox[{"[", 
+    RowBox[{"2", ",", 
+     RowBox[{"2", ";;"}]}], "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Differences", "[", 
+  RowBox[{"espnNBAseasonindexbounds", "[", 
+   RowBox[{"[", 
+    RowBox[{"3", ",", 
+     RowBox[{"2", ";;"}]}], "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Differences", "[", 
+  RowBox[{"espnNBAseasonindexbounds", "[", 
+   RowBox[{"[", 
+    RowBox[{"4", ",", 
+     RowBox[{"2", ";;"}]}], "]"}], "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Differences", "[", 
+  RowBox[{"espnNBAseasonindexbounds", "[", 
+   RowBox[{"[", 
+    RowBox[{"5", ",", 
+     RowBox[{"2", ";;"}]}], "]"}], "]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.721845237233984*^9, 3.721845275697666*^9}, {
+  3.721846087039877*^9, 
+  3.7218460961826572`*^9}},ExpressionUUID->"bc9e6f7e-0f42-4c9c-94b3-\
+a893cbc098b9"],
+
+Cell[BoxData[
+ RowBox[{"{", "1539", "}"}]], "Output",
+ CellChangeTimes->{{3.721845244587784*^9, 3.721845275953033*^9}, {
+   3.7218460965590487`*^9, 3.721846100516583*^9}, 3.721846266725946*^9, 
+   3.721846765531537*^9, 3.7218472765000467`*^9, 3.721847322589683*^9, 
+   3.721847683867178*^9, {3.721849168950944*^9, 3.72184919977136*^9}, 
+   3.721849371703896*^9},ExpressionUUID->"b855d68f-94f7-4d8a-b8ea-\
+799c969764d1"],
+
+Cell[BoxData[
+ RowBox[{"{", "1233", "}"}]], "Output",
+ CellChangeTimes->{{3.721845244587784*^9, 3.721845275953033*^9}, {
+   3.7218460965590487`*^9, 3.721846100516583*^9}, 3.721846266725946*^9, 
+   3.721846765531537*^9, 3.7218472765000467`*^9, 3.721847322589683*^9, 
+   3.721847683867178*^9, {3.721849168950944*^9, 3.72184919977136*^9}, 
+   3.721849371707816*^9},ExpressionUUID->"0ee4dd0a-faec-4308-95ed-\
+ad9bf6bd72fb"],
+
+Cell[BoxData[
+ RowBox[{"{", "1229", "}"}]], "Output",
+ CellChangeTimes->{{3.721845244587784*^9, 3.721845275953033*^9}, {
+   3.7218460965590487`*^9, 3.721846100516583*^9}, 3.721846266725946*^9, 
+   3.721846765531537*^9, 3.7218472765000467`*^9, 3.721847322589683*^9, 
+   3.721847683867178*^9, {3.721849168950944*^9, 3.72184919977136*^9}, 
+   3.721849371710925*^9},ExpressionUUID->"2b5084b0-99ec-4b6e-860f-\
+b74704c8f80a"],
+
+Cell[BoxData[
+ RowBox[{"{", "1229", "}"}]], "Output",
+ CellChangeTimes->{{3.721845244587784*^9, 3.721845275953033*^9}, {
+   3.7218460965590487`*^9, 3.721846100516583*^9}, 3.721846266725946*^9, 
+   3.721846765531537*^9, 3.7218472765000467`*^9, 3.721847322589683*^9, 
+   3.721847683867178*^9, {3.721849168950944*^9, 3.72184919977136*^9}, 
+   3.721849371714047*^9},ExpressionUUID->"e557e07a-feb8-48e3-9db6-\
+099a435f0153"],
+
+Cell[BoxData[
+ RowBox[{"{", "1229", "}"}]], "Output",
+ CellChangeTimes->{{3.721845244587784*^9, 3.721845275953033*^9}, {
+   3.7218460965590487`*^9, 3.721846100516583*^9}, 3.721846266725946*^9, 
+   3.721846765531537*^9, 3.7218472765000467`*^9, 3.721847322589683*^9, 
+   3.721847683867178*^9, {3.721849168950944*^9, 3.72184919977136*^9}, 
+   3.721849371717236*^9},ExpressionUUID->"eaae2828-6c14-49bc-ba54-\
+f53b18ac46ee"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Import", " ", "Year", " ", "ESPN", " ", "Data"}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.7218464550681973`*^9, 3.721846461409256*^9}, {
+  3.721847311951599*^9, 
+  3.7218473314955473`*^9}},ExpressionUUID->"e9a985f7-dbf3-4df7-8f90-\
+844768534c74"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"year", " ", "=", " ", "\"\<2018\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"indexOfYear", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"Position", "[", 
+     RowBox[{"espnNBAseasonindexbounds", ",", "year"}], "]"}], "[", 
+    RowBox[{"[", 
+     RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"lowerbound", " ", "=", " ", 
+   RowBox[{"espnNBAseasonindexbounds", "[", 
+    RowBox[{"[", 
+     RowBox[{"indexOfYear", ",", "2"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upperbound", " ", "=", " ", 
+    RowBox[{"espnNBAseasonindexbounds", "[", 
+     RowBox[{"[", 
+      RowBox[{"indexOfYear", ",", "3"}], "]"}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ord", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"today", " ", "=", " ", 
+    RowBox[{"DateObject", "[", "\"\<Today\>\"", "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "lowerbound"}], ",", " ", 
+    RowBox[{"i", "\[LessEqual]", " ", "upperbound"}], ",", 
+    RowBox[{"++", "i"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Print", "[", 
+      RowBox[{"i", "+", "1", "-", "lowerbound"}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"url", " ", "=", " ", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{"\"\<http://www.espn.com/nba/game?gameId=\>\"", ",", 
+        RowBox[{"ToString", "[", "i", "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"data", " ", "=", " ", 
+      RowBox[{"Import", "[", 
+       RowBox[{"url", ",", "\"\<Data\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"title", " ", "=", " ", 
+      RowBox[{"Import", "[", 
+       RowBox[{"url", ",", "\"\<Title\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"newrow", " ", "=", " ", 
+      RowBox[{"{", "i", "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+       "title", " ", "\[Equal]", " ", 
+        "\"\<NBA Basketball Scores - NBA Scoreboard - ESPN\>\""}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"(*", 
+        RowBox[{"do", " ", "nothing"}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Print", "[", "\"\<No game at index\>\"", "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "Make", " ", "all", " ", "newrows", " ", "same", " ", "length", " ", 
+          "in", " ", "any", " ", "case"}], " ", "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "\"\<No game at index\>\""}], "]"}], ";"}], 
+       "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"str", " ", "=", " ", 
+         RowBox[{"StringJoin", "[", 
+          RowBox[{
+           RowBox[{"StringSplit", "[", "title", "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"4", ";;"}], "]"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"date", " ", "=", " ", 
+         RowBox[{"DateObject", "[", "str", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "title"}], "]"}], ";", "\[IndentingNewLine]", 
+        
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"newrow", ",", "date"}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{
+         "If", " ", "the", " ", "game", " ", "happened", " ", "already"}], 
+         "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"ToExpression", "[", 
+            RowBox[{
+             RowBox[{"StringSplit", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"DateDifference", "[", 
+                RowBox[{"today", ",", "date"}], "]"}], "]"}], "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}], "<", "0"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"newrow", " ", "=", " ", 
+            RowBox[{"Join", "[", 
+             RowBox[{"newrow", ",", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{"data", "[", 
+                RowBox[{"[", 
+                 RowBox[{"2", ",", "1", ",", "2", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", "2"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", "6"}], "}"}]}], "]"}], "]"}], "]"}]}], 
+             "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"newrow", " ", "=", " ", 
+            RowBox[{"Join", "[", 
+             RowBox[{"newrow", ",", 
+              RowBox[{
+               RowBox[{"StringSplit", "[", 
+                RowBox[{"data", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"3", ",", "1", ",", "3", ",", "2", ",", "1"}], 
+                  "]"}], "]"}], "]"}], "[", 
+               RowBox[{"[", 
+                RowBox[{"2", ";;"}], "]"}], "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"newrow", ",", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{
+               RowBox[{"StringSplit", "[", 
+                RowBox[{"data", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"3", ",", "1", ",", "3", ",", "2", ",", "2"}], 
+                  "]"}], "]"}], "]"}], "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "]"}], ";"}], 
+          "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Print", "[", "\"\<game hasnt happened yet\>\"", "]"}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"newrow", ",", "\"\<game hasnt happened yet\>\""}], "]"}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"newrow", ",", "\"\<game hasnt happened yet\>\""}], "]"}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"newrow", ",", "\"\<game hasnt happened yet\>\""}], "]"}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"newrow", ",", "\"\<game hasnt happened yet\>\""}], "]"}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"newrow", ",", "\"\<game hasnt happened yet\>\""}], "]"}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"newrow", ",", "\"\<game hasnt happened yet\>\""}], "]"}],
+            ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"newrow", ",", "\"\<game hasnt happened yet\>\""}], "]"}],
+            ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"ord", ",", "newrow"}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "newrow", "]"}], ";"}]}], "\[IndentingNewLine]", 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.72168502386802*^9, 3.7216850846119947`*^9}, {
+   3.72168560398739*^9, 3.7216856413290987`*^9}, {3.7216859975666656`*^9, 
+   3.721686034228651*^9}, {3.7216861830729856`*^9, 3.721686186519229*^9}, {
+   3.721686226784193*^9, 3.721686252172687*^9}, 3.72168634777192*^9, {
+   3.721686379193673*^9, 3.721686383519743*^9}, {3.721686435030382*^9, 
+   3.72168644711127*^9}, {3.7216998228954077`*^9, 3.721699835323214*^9}, {
+   3.721700237850514*^9, 3.72170024475784*^9}, {3.721700340685144*^9, 
+   3.721700341668261*^9}, {3.721840243950276*^9, 3.721840244052618*^9}, {
+   3.721841026579691*^9, 3.721841055380082*^9}, {3.721841718533922*^9, 
+   3.721841838996394*^9}, {3.7218421851512527`*^9, 3.721842313201528*^9}, {
+   3.721846281291388*^9, 3.721846302354569*^9}, {3.721846557705572*^9, 
+   3.721846682726994*^9}, {3.721846876130039*^9, 3.721846895409692*^9}, {
+   3.721847008165535*^9, 3.721847009021427*^9}, {3.7218471831977882`*^9, 
+   3.721847187178475*^9}, {3.721847221990546*^9, 3.721847266411718*^9}, {
+   3.721847297371181*^9, 3.721847305409478*^9}, {3.721847433878724*^9, 
+   3.721847473926098*^9}, {3.721847638826459*^9, 3.721847679282157*^9}, {
+   3.721847833059947*^9, 3.7218478685390873`*^9}, {3.7218487987167788`*^9, 
+   3.721848818171574*^9}, {3.7218488655736217`*^9, 3.721848868049761*^9}, {
+   3.721848981470223*^9, 3.7218489824693747`*^9}, 
+   3.721849174764276*^9},ExpressionUUID->"8c8c080c-a47a-4b9b-b160-\
+af9b26825092"]
+},
+Evaluator->"New Kernel 2",
+WindowSize->{1020, 573},
+WindowMargins->{{Automatic, 100}, {Automatic, 35}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 289, 7, 32, "Input", "ExpressionUUID" -> \
+"520fcd27-5837-4314-971c-4130260ad501"],
+Cell[850, 29, 1491, 30, 159, "Input", "ExpressionUUID" -> \
+"ee684b90-c6ba-4d58-8e92-0d56528ca142"],
+Cell[CellGroupData[{
+Cell[2366, 63, 1113, 29, 117, "Input", "ExpressionUUID" -> \
+"bc9e6f7e-0f42-4c9c-94b3-a893cbc098b9"],
+Cell[3482, 94, 419, 7, 32, "Output", "ExpressionUUID" -> \
+"b855d68f-94f7-4d8a-b8ea-799c969764d1"],
+Cell[3904, 103, 419, 7, 32, "Output", "ExpressionUUID" -> \
+"0ee4dd0a-faec-4308-95ed-ad9bf6bd72fb"],
+Cell[4326, 112, 419, 7, 32, "Output", "ExpressionUUID" -> \
+"2b5084b0-99ec-4b6e-860f-b74704c8f80a"],
+Cell[4748, 121, 419, 7, 32, "Output", "ExpressionUUID" -> \
+"e557e07a-feb8-48e3-9db6-099a435f0153"],
+Cell[5170, 130, 419, 7, 32, "Output", "ExpressionUUID" -> \
+"eaae2828-6c14-49bc-ba54-f53b18ac46ee"]
+}, Open  ]],
+Cell[5604, 140, 300, 7, 32, "Input", "ExpressionUUID" -> \
+"e9a985f7-dbf3-4df7-8f90-844768534c74"],
+Cell[5907, 149, 9791, 215, 1083, "Input", "ExpressionUUID" -> \
+"8c8c080c-a47a-4b9b-b160-af9b26825092"]
+}
+]
+*)
+
