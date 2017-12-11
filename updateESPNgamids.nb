@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     81061,       1925]
-NotebookOptionsPosition[     75739,       1797]
-NotebookOutlinePosition[     76120,       1814]
-CellTagsIndexPosition[     76077,       1811]
+NotebookDataLength[     82420,       1965]
+NotebookOptionsPosition[     76857,       1831]
+NotebookOutlinePosition[     77240,       1848]
+CellTagsIndexPosition[     77197,       1845]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1678,7 +1678,41 @@ Cell[BoxData[
   3.721876889545155*^9}, {3.721877956949939*^9, 3.721877991754732*^9}, {
   3.72190820767243*^9, 
   3.721908212638157*^9}},ExpressionUUID->"5c5f6715-bc89-4758-a506-\
-6acd34076301"]
+6acd34076301"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"import", "[", 
+  RowBox[{"[", "7", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.722004863670822*^9, 
+  3.722004884337907*^9}},ExpressionUUID->"a0884594-a672-451d-9b01-\
+c6b230819a89"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+  "400974443", 
+   ",", "\<\"Cavaliers vs. Bucks - Game Summary - October 20, 2017 - \
+ESPN\"\>", ",", 
+   TemplateBox[{RowBox[{
+       StyleBox[
+       "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+       "\"Fri 20 Oct 2017\""}],RowBox[{"DateObject", "[", 
+       RowBox[{
+         RowBox[{"{", 
+           RowBox[{"2017", ",", "10", ",", "20"}], "}"}], ",", "\"Day\"", ",",
+          "\"Gregorian\"", ",", 
+         RowBox[{"-", "5.`"}]}], "]"}]},
+    "DateObject",
+    Editable->False], ",", "\<\"Cleveland Cavaliers\"\>", ",", "116", 
+   ",", "\<\"Milwaukee Bucks\"\>", ",", "97", ",", "\<\"Milwaukee Bucks\"\>", 
+   ",", 
+   RowBox[{"-", "1.`"}], ",", "210"}], "}"}]], "Output",
+ CellChangeTimes->{{3.722004872596653*^9, 
+  3.7220048849481697`*^9}},ExpressionUUID->"ab46d0fd-f3c5-4eab-a9e2-\
+1d334ba48097"]
+}, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1797,7 +1831,7 @@ Cell[BoxData[
 },
 Evaluator->"New Kernel 2",
 WindowSize->{1182, 577},
-WindowMargins->{{Automatic, 9}, {Automatic, 0}},
+WindowMargins->{{1, Automatic}, {-57, Automatic}},
 FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
 2017)",
 StyleDefinitions->"Default.nb"
@@ -1911,19 +1945,25 @@ Cell[65632, 1544, 275, 7, 32, "Input", "ExpressionUUID" -> \
 Cell[CellGroupData[{
 Cell[65932, 1555, 285, 7, 32, "Input", "ExpressionUUID" -> \
 "df70c063-a1fc-46d5-b6b4-0974031dddc5"],
-Cell[66220, 1564, 2344, 42, 76, "Output", "ExpressionUUID" -> \
+Cell[66220, 1564, 2344, 42, 65, "Output", "ExpressionUUID" -> \
 "b3f31fc2-2abc-4531-a771-5b5c41f390b0"]
 }, Open  ]],
 Cell[68579, 1609, 2817, 71, 222, "Input", "ExpressionUUID" -> \
-"5c5f6715-bc89-4758-a506-6acd34076301"]
+"5c5f6715-bc89-4758-a506-6acd34076301"],
+Cell[CellGroupData[{
+Cell[71421, 1684, 208, 5, 32, "Input", "ExpressionUUID" -> \
+"a0884594-a672-451d-9b01-c6b230819a89"],
+Cell[71632, 1691, 870, 22, 70, "Output", "ExpressionUUID" -> \
+"ab46d0fd-f3c5-4eab-a9e2-1d334ba48097"]
+}, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[71433, 1685, 433, 6, 64, "Section", "ExpressionUUID" -> \
+Cell[72551, 1719, 433, 6, 64, "Section", "ExpressionUUID" -> \
 "ef630a22-81c5-412d-a6a1-57ed6eb191f9"],
 Cell[CellGroupData[{
-Cell[71891, 1695, 3439, 87, 222, "Input", "ExpressionUUID" -> \
+Cell[73009, 1729, 3439, 87, 222, "Input", "ExpressionUUID" -> \
 "3d8b2bc6-43ba-493a-87eb-f145119386f1"],
-Cell[75333, 1784, 378, 9, 24, "Message", "ExpressionUUID" -> \
+Cell[76451, 1818, 378, 9, 24, "Message", "ExpressionUUID" -> \
 "dd6bcae9-7bb7-40b6-a7ec-88a5af45bb92"]
 }, Open  ]]
 }, Open  ]]
