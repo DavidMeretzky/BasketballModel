@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    617722,      17335]
-NotebookOptionsPosition[    488937,      14832]
-NotebookOutlinePosition[    489293,      14848]
-CellTagsIndexPosition[    489250,      14845]
+NotebookDataLength[    636167,      17787]
+NotebookOptionsPosition[    505405,      15242]
+NotebookOutlinePosition[    505761,      15258]
+CellTagsIndexPosition[    505718,      15255]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -14692,19 +14692,24 @@ Cell[BoxData[
     "]"}], "]"}]}]], "Input",
  CellChangeTimes->{{3.721938713638187*^9, 3.721938726376438*^9}, {
   3.721939032424445*^9, 3.72193903665891*^9}, {3.721939138147657*^9, 
-  3.721939212331711*^9}},ExpressionUUID->"adc86e91-a324-4518-b334-\
+  3.721939212331711*^9}, {3.722275340233481*^9, 3.722275342244233*^9}, {
+  3.722275410596162*^9, 
+  3.7222754114243383`*^9}},ExpressionUUID->"adc86e91-a324-4518-b334-\
 055beaf4fda4"],
 
-Cell[BoxData["390"], "Output",
+Cell[BoxData["412"], "Output",
  CellChangeTimes->{
   3.721938717902563*^9, {3.721939162997313*^9, 3.721939213392282*^9}, 
    3.721956879819688*^9, 3.721956970923141*^9, 3.721957202784524*^9, 
    3.721957267113595*^9, 3.721957594715289*^9, {3.72195802292728*^9, 
    3.721958048015922*^9}, 3.7219961824667177`*^9, 3.7219963255472593`*^9, 
-   3.72203979345992*^9, 
-   3.7220404869410477`*^9},ExpressionUUID->"31268cb1-881d-450a-b433-\
-f23f1adb48a8"]
+   3.72203979345992*^9, 3.7220404869410477`*^9, 3.722275233503484*^9, 
+   3.7222753429261427`*^9, 
+   3.722275420294969*^9},ExpressionUUID->"51481e51-7eb9-4d14-8786-\
+75673a7bbece"]
 }, Open  ]],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -14819,6 +14824,90 @@ Cell[BoxData[
   3.721996318476722*^9}},ExpressionUUID->"78a2e1f1-304f-4a95-8c11-\
 e5c554065563"],
 
+Cell[CellGroupData[{
+
+Cell[BoxData["397"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275421871619*^9},ExpressionUUID->"1640cd3b-9f0b-4512-9717-\
+f3dfe56306b1"],
+
+Cell[BoxData["398"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275424435948*^9},ExpressionUUID->"bdd78781-9f8d-4cf2-9189-\
+eb21c3eb41f0"],
+
+Cell[BoxData["399"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275426861146*^9},ExpressionUUID->"b65e382b-77a0-4849-81ae-\
+ddb0f6b2ef61"],
+
+Cell[BoxData["400"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275429311245*^9},ExpressionUUID->"d92f1997-0818-44fd-997c-\
+d04c7431ec72"],
+
+Cell[BoxData["401"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275431714464*^9},ExpressionUUID->"3fb7d5c4-f85f-4224-945c-\
+10e9f1e74449"],
+
+Cell[BoxData["402"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275433985355*^9},ExpressionUUID->"ee7e9fe5-1b79-48bb-86fe-\
+46a50c8f8113"],
+
+Cell[BoxData["403"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275436465172*^9},ExpressionUUID->"1154e9f2-9a64-43ad-ba4c-\
+fe7cf9b370ee"],
+
+Cell[BoxData["404"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275438793755*^9},ExpressionUUID->"8de46341-6e2f-4c4f-af37-\
+3b30af0fe905"],
+
+Cell[BoxData["405"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275442288395*^9},ExpressionUUID->"0c8aa649-2ed2-421c-8ccc-\
+d03672d1ad90"],
+
+Cell[BoxData["406"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.7222754434327927`*^9},ExpressionUUID->"52466b51-c51f-4f64-97af-\
+e6460ef015a8"],
+
+Cell[BoxData["407"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275445918215*^9},ExpressionUUID->"fdc73408-36c9-439b-9a09-\
+836d532fb142"],
+
+Cell[BoxData["408"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275448283452*^9},ExpressionUUID->"38676408-a7b5-4081-b609-\
+08c37a8f2d57"],
+
+Cell[BoxData["409"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.7222754526468277`*^9},ExpressionUUID->"00755512-7855-4369-8e70-\
+bcfeff28178a"],
+
+Cell[BoxData["410"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275453335133*^9},ExpressionUUID->"5861c690-e080-43ec-ab67-\
+342e1abb563a"],
+
+Cell[BoxData["411"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.722275457012355*^9},ExpressionUUID->"b628514d-132e-4189-840c-\
+51fbacc09bb4"],
+
+Cell[BoxData["412"], "Print",
+ CellChangeTimes->{3.722275236780425*^9, 3.722275347853084*^9, 
+  3.7222754588391943`*^9},ExpressionUUID->"f425015e-0f04-4a98-bc96-\
+6d243f6e41e7"]
+}, Open  ]]
+}, Open  ]],
+
 Cell[BoxData[
  RowBox[{
   RowBox[{"Export", "[", 
@@ -14827,7 +14916,328 @@ Cell[BoxData[
     ",", "bballrefdatafull", ",", "\"\<Table\>\""}], "]"}], ";"}]], "Input",
  CellChangeTimes->{{3.7219963721561117`*^9, 
   3.721996383156186*^9}},ExpressionUUID->"4ae3e6cf-a902-45aa-a78a-\
-5888efd0c133"]
+5888efd0c133"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"bballrefdatafull", "[", 
+  RowBox[{"[", 
+   RowBox[{
+    RowBox[{"397", ";;", "417"}], ",", 
+    RowBox[{"1", ";;", "6"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.72227528768816*^9, 3.722275316684045*^9}, {
+  3.722275357608713*^9, 
+  3.722275357846528*^9}},ExpressionUUID->"12bea71c-4818-4c34-bfb7-\
+b1fd2efe232f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"201712120BRK\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Tue 12 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "12"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Washington Wizards\"\>", ",", "98", 
+     ",", "\<\"Brooklyn Nets\"\>", ",", "103"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712120CLE\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Tue 12 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "12"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Atlanta Hawks\"\>", ",", "114", 
+     ",", "\<\"Cleveland Cavaliers\"\>", ",", "123"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712120DAL\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Tue 12 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "12"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"San Antonio Spurs\"\>", ",", "89", 
+     ",", "\<\"Dallas Mavericks\"\>", ",", "95"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712120DET\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Tue 12 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "12"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Denver Nuggets\"\>", ",", "103", 
+     ",", "\<\"Detroit Pistons\"\>", ",", "84"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712120MIN\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Tue 12 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "12"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Philadelphia 76ers\"\>", ",", "118", 
+     ",", "\<\"Minnesota Timberwolves\"\>", ",", "112"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712120NYK\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Tue 12 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "12"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Los Angeles Lakers\"\>", ",", "109", 
+     ",", "\<\"New York Knicks\"\>", ",", "113"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712120SAC\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Tue 12 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "12"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Phoenix Suns\"\>", ",", "92", 
+     ",", "\<\"Sacramento Kings\"\>", ",", "99"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130BOS\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Denver Nuggets\"\>", ",", "118", 
+     ",", "\<\"Boston Celtics\"\>", ",", "124"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130CHI\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Utah Jazz\"\>", ",", "100", 
+     ",", "\<\"Chicago Bulls\"\>", ",", "103"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130HOU\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Charlotte Hornets\"\>", ",", "96", 
+     ",", "\<\"Houston Rockets\"\>", ",", "108"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130IND\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Oklahoma City Thunder\"\>", ",", "100", 
+     ",", "\<\"Indiana Pacers\"\>", ",", "95"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130MIA\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Portland Trail Blazers\"\>", ",", "102", 
+     ",", "\<\"Miami Heat\"\>", ",", "95"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130NOP\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Milwaukee Bucks\"\>", ",", "108", 
+     ",", "\<\"New Orleans Pelicans\"\>", ",", "115"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130ORL\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Los Angeles Clippers\"\>", ",", "106", 
+     ",", "\<\"Orlando Magic\"\>", ",", "95"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130PHO\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Toronto Raptors\"\>", ",", "115", 
+     ",", "\<\"Phoenix Suns\"\>", ",", "109"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712130WAS\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Memphis Grizzlies\"\>", ",", "87", 
+     ",", "\<\"Washington Wizards\"\>", ",", "93"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712140ATL\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Thu 14 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "14"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Detroit Pistons\"\>", 
+     ",", "\<\"Have not played\"\>", ",", "\<\"Atlanta Hawks\"\>", 
+     ",", "\<\"Have not played\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712140BRK\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Thu 14 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "14"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"New York Knicks\"\>", 
+     ",", "\<\"Have not played\"\>", ",", "\<\"Brooklyn Nets\"\>", 
+     ",", "\<\"Have not played\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712140CLE\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Thu 14 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "14"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Los Angeles Lakers\"\>", 
+     ",", "\<\"Have not played\"\>", ",", "\<\"Cleveland Cavaliers\"\>", 
+     ",", "\<\"Have not played\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712140GSW\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Thu 14 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "14"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Dallas Mavericks\"\>", 
+     ",", "\<\"Have not played\"\>", ",", "\<\"Golden State Warriors\"\>", 
+     ",", "\<\"Have not played\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"201712140MIN\"\>", ",", 
+     TemplateBox[{RowBox[{
+         StyleBox[
+         "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+         "\"Thu 14 Dec 2017\""}],RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             RowBox[{"2017", ",", "12", ",", "14"}], "}"}], ",", "\"Day\"", 
+           ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "5.`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "\<\"Sacramento Kings\"\>", 
+     ",", "\<\"Have not played\"\>", ",", "\<\"Minnesota Timberwolves\"\>", 
+     ",", "\<\"Have not played\"\>"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.722275307137747*^9, 3.722275317169635*^9}, 
+   3.7222753580075808`*^9, 
+   3.7222754617935333`*^9},ExpressionUUID->"04df5691-ef7f-451c-8e40-\
+edc4e1d1934e"]
+}, Open  ]]
 }, Open  ]]
 },
 WindowSize->{1111, 598},
@@ -17327,15 +17737,57 @@ Cell[479766, 14610, 590, 12, 32, "Input", "ExpressionUUID" -> \
 Cell[480359, 14624, 2306, 54, 180, "Input", "ExpressionUUID" -> \
 "2e8d282a-bd19-4508-8f45-22e1548f9048"],
 Cell[CellGroupData[{
-Cell[482690, 14682, 545, 13, 32, "Input", "ExpressionUUID" -> \
+Cell[482690, 14682, 645, 15, 32, "Input", "ExpressionUUID" -> \
 "adc86e91-a324-4518-b334-055beaf4fda4"],
-Cell[483238, 14697, 446, 8, 32, "Output", "ExpressionUUID" -> \
-"31268cb1-881d-450a-b433-f23f1adb48a8"]
+Cell[483338, 14699, 518, 9, 32, "Output", "ExpressionUUID" -> \
+"51481e51-7eb9-4d14-8786-75673a7bbece"]
 }, Open  ]],
-Cell[483699, 14708, 4876, 111, 495, "Input", "ExpressionUUID" -> \
+Cell[CellGroupData[{
+Cell[483893, 14713, 4876, 111, 495, "Input", "ExpressionUUID" -> \
 "78a2e1f1-304f-4a95-8c11-e5c554065563"],
-Cell[488578, 14821, 343, 8, 32, "Input", "ExpressionUUID" -> \
-"4ae3e6cf-a902-45aa-a78a-5888efd0c133"]
+Cell[CellGroupData[{
+Cell[488794, 14828, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"1640cd3b-9f0b-4512-9717-f3dfe56306b1"],
+Cell[488972, 14833, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"bdd78781-9f8d-4cf2-9189-eb21c3eb41f0"],
+Cell[489150, 14838, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"b65e382b-77a0-4849-81ae-ddb0f6b2ef61"],
+Cell[489328, 14843, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"d92f1997-0818-44fd-997c-d04c7431ec72"],
+Cell[489506, 14848, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"3fb7d5c4-f85f-4224-945c-10e9f1e74449"],
+Cell[489684, 14853, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"ee7e9fe5-1b79-48bb-86fe-46a50c8f8113"],
+Cell[489862, 14858, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"1154e9f2-9a64-43ad-ba4c-fe7cf9b370ee"],
+Cell[490040, 14863, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"8de46341-6e2f-4c4f-af37-3b30af0fe905"],
+Cell[490218, 14868, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"0c8aa649-2ed2-421c-8ccc-d03672d1ad90"],
+Cell[490396, 14873, 177, 3, 24, "Print", "ExpressionUUID" -> \
+"52466b51-c51f-4f64-97af-e6460ef015a8"],
+Cell[490576, 14878, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"fdc73408-36c9-439b-9a09-836d532fb142"],
+Cell[490754, 14883, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"38676408-a7b5-4081-b609-08c37a8f2d57"],
+Cell[490932, 14888, 177, 3, 24, "Print", "ExpressionUUID" -> \
+"00755512-7855-4369-8e70-bcfeff28178a"],
+Cell[491112, 14893, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"5861c690-e080-43ec-ab67-342e1abb563a"],
+Cell[491290, 14898, 175, 3, 24, "Print", "ExpressionUUID" -> \
+"b628514d-132e-4189-840c-51fbacc09bb4"],
+Cell[491468, 14903, 177, 3, 24, "Print", "ExpressionUUID" -> \
+"f425015e-0f04-4a98-bc96-6d243f6e41e7"]
+}, Open  ]]
+}, Open  ]],
+Cell[491672, 14910, 343, 8, 32, "Input", "ExpressionUUID" -> \
+"4ae3e6cf-a902-45aa-a78a-5888efd0c133"],
+Cell[CellGroupData[{
+Cell[492040, 14922, 346, 9, 32, "Input", "ExpressionUUID" -> \
+"12bea71c-4818-4c34-bfb7-b1fd2efe232f"],
+Cell[492389, 14933, 12988, 305, 662, "Output", "ExpressionUUID" -> \
+"04df5691-ef7f-451c-8e40-edc4e1d1934e"]
+}, Open  ]]
 }, Open  ]]
 }
 ]
