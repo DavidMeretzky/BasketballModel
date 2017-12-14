@@ -41883,7 +41883,7 @@ c0fae9de285b"]
 }, Open  ]]
 },
 WindowSize->{1284, 624},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{0, Automatic}, {Automatic, 8}},
 FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
 2017)",
 StyleDefinitions->"Default.nb"
@@ -41930,7 +41930,7 @@ Cell[33011, 736, 424, 11, 32, "Input", "ExpressionUUID" -> \
 "72f88de4-abae-43cd-b761-12b8a9aa79de"],
 Cell[33438, 749, 345, 10, 32, "Input", "ExpressionUUID" -> \
 "caf6c672-915d-4304-be84-a95467ac06e8"],
-Cell[33786, 761, 1393, 33, 151, "Input", "ExpressionUUID" -> \
+Cell[33786, 761, 1393, 33, 117, "Input", "ExpressionUUID" -> \
 "918d00aa-4a8c-4f0e-8593-a3fa4c57663e"],
 Cell[35182, 796, 3154, 69, 369, "Input", "ExpressionUUID" -> \
 "f777b50c-2c20-47fa-8452-38e0a0b824c8"],
