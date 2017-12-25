@@ -1,0 +1,2854 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    122190,       2846]
+NotebookOptionsPosition[    111750,       2615]
+NotebookOutlinePosition[    112106,       2631]
+CellTagsIndexPosition[    112063,       2628]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Download lines from oddsshark.com", "Title",
+ CellChangeTimes->{{3.72286720232073*^9, 
+  3.722867213263678*^9}},ExpressionUUID->"fc3ace78-de84-411c-824a-\
+76dd6a994f33"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"schedule", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "22"}], ",", " ", 
+    RowBox[{"i", " ", "\[LessEqual]", 
+     RowBox[{"22", "+", "29"}]}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"url", " ", "=", " ", 
+      RowBox[{"StringJoin", "[", 
+       RowBox[{
+       "\"\<http://www.oddsshark.com/stats/gamelog/basketball/nba/207\>\"", 
+        ",", 
+        RowBox[{"ToString", "[", "i", "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"scheduledata", " ", "=", " ", 
+      RowBox[{
+       RowBox[{"Import", "[", 
+        RowBox[{"url", ",", "\"\<Data\>\""}], "]"}], "[", 
+       RowBox[{"[", 
+        RowBox[{"2", ",", "2", ",", "2"}], "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"team", " ", "=", " ", 
+      RowBox[{"Import", "[", 
+       RowBox[{"url", ",", "\"\<Title\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"AppendTo", "[", 
+      RowBox[{"schedule", ",", 
+       RowBox[{"{", 
+        RowBox[{"team", ",", "scheduledata"}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "i", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "team", "]"}], ";"}]}], "\[IndentingNewLine]", " ",
+    "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.722865837157682*^9, 3.7228658801996613`*^9}, {
+   3.722866647040949*^9, 3.722866726302341*^9}, {3.7228668620728617`*^9, 
+   3.7228669548593693`*^9}, {3.722867088989655*^9, 3.7228670901961117`*^9}, 
+   3.722867405908049*^9},ExpressionUUID->"00c7c199-a506-4ec3-834e-\
+d23b414a5d41"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["22"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884934305541*^9},ExpressionUUID->"2a744d7a-6472-4785-a60c-\
+407037e04ae0"],
+
+Cell[BoxData["\<\"Boston Celtics - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849343094482`*^9},ExpressionUUID->"7acf9322-d28c-4a91-a1d5-\
+37ea12d0c72b"],
+
+Cell[BoxData["23"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884936868752*^9},ExpressionUUID->"31aee398-56c0-4031-b242-\
+0c15099c7860"],
+
+Cell[BoxData["\<\"Denver Nuggets - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884936874052*^9},ExpressionUUID->"6164ac8b-d70c-4600-9609-\
+f498ecffddd5"],
+
+Cell[BoxData["24"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884939037188*^9},ExpressionUUID->"391bb6bc-b260-45a0-a9ac-\
+c82f5235f362"],
+
+Cell[BoxData["\<\"San Antonio Spurs - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884939044599*^9},ExpressionUUID->"e337069e-9305-41c9-ac1d-\
+6aec3ff7e201"],
+
+Cell[BoxData["25"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884940988195*^9},ExpressionUUID->"4a5c3074-dadf-4c53-a38e-\
+d2847d142135"],
+
+Cell[BoxData["\<\"Milwaukee Bucks - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884940993579*^9},ExpressionUUID->"4cfe4176-f905-4a12-b589-\
+4b97ba1c3cd0"],
+
+Cell[BoxData["26"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884943302239*^9},ExpressionUUID->"05964846-9c9a-4d2f-95b2-\
+bf3979955969"],
+
+Cell[BoxData["\<\"Miami Heat - NBA Schedule & Game Log | Odds Shark\"\>"], \
+"Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849433086348`*^9},ExpressionUUID->"3424f0f2-fcbf-43fe-a06f-\
+0618a459ed15"],
+
+Cell[BoxData["27"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884946189921*^9},ExpressionUUID->"6d59aaf8-cc9e-4f68-9b2f-\
+4ba9b548c79b"],
+
+Cell[BoxData["\<\"Dallas Mavericks - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884946196074*^9},ExpressionUUID->"70bf16ab-25d7-410d-8802-\
+42e10997dbe3"],
+
+Cell[BoxData["28"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884948801634*^9},ExpressionUUID->"7185774d-8490-4fa4-958b-\
+e2a877b5116a"],
+
+Cell[BoxData["\<\"Oklahoma City Thunder - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849488082867`*^9},ExpressionUUID->"f22a8302-e7bb-428c-97cb-\
+11462ed90715"],
+
+Cell[BoxData["29"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884952214216*^9},ExpressionUUID->"87c1a53a-26eb-48e8-9357-\
+46209b7a864d"],
+
+Cell[BoxData["\<\"Memphis Grizzlies - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884952218844*^9},ExpressionUUID->"72ac1efc-95d8-49d4-91ce-\
+d12e8bdc1fb0"],
+
+Cell[BoxData["30"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884954542819*^9},ExpressionUUID->"2e69826d-925b-4cb9-805a-\
+50a34911262e"],
+
+Cell[BoxData["\<\"Phoenix Suns - NBA Schedule & Game Log | Odds Shark\"\>"], \
+"Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884954547679*^9},ExpressionUUID->"04d74446-8e30-4efe-b035-\
+77a9c5c9d206"],
+
+Cell[BoxData["31"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.72288495687906*^9},ExpressionUUID->"6755bc35-dfb1-462c-b0bd-b94d706118df"],
+
+Cell[BoxData["\<\"Philadelphia 76ers - NBA Schedule & Game Log | Odds Shark\"\
+\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884956883237*^9},ExpressionUUID->"caeff9c9-28c7-4309-830e-\
+cc6894149f45"],
+
+Cell[BoxData["32"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884959491125*^9},ExpressionUUID->"1dc4c5f7-e924-4784-b55a-\
+cddea7d295b1"],
+
+Cell[BoxData["\<\"Chicago Bulls - NBA Schedule & Game Log | Odds Shark\"\>"], \
+"Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884959495722*^9},ExpressionUUID->"607d0dcd-fdf0-4218-995f-\
+1954f8b6a447"],
+
+Cell[BoxData["33"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884962299073*^9},ExpressionUUID->"4f7e0cdd-5f7a-4cfa-936e-\
+58f7664f5499"],
+
+Cell[BoxData["\<\"New Orleans Pelicans - NBA Schedule & Game Log | Odds Shark\
+\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884962303708*^9},ExpressionUUID->"80ed02c7-c0fb-4557-b4bd-\
+f1b527097f72"],
+
+Cell[BoxData["34"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849651503973`*^9},ExpressionUUID->"72a25e38-749f-4894-ac2c-\
+15993034b623"],
+
+Cell[BoxData["\<\"Atlanta Hawks - NBA Schedule & Game Log | Odds Shark\"\>"], \
+"Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884965157164*^9},ExpressionUUID->"fae5b897-8ad7-425e-8142-\
+d353ccaaed13"],
+
+Cell[BoxData["35"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849677094603`*^9},ExpressionUUID->"32a1d398-50f0-4e57-9c21-\
+181cb5e4c3e7"],
+
+Cell[BoxData["\<\"Cleveland Cavaliers - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884967716201*^9},ExpressionUUID->"8117779a-453a-4711-a691-\
+5c9321302da3"],
+
+Cell[BoxData["36"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.72288497091682*^9},ExpressionUUID->"4b19ae93-5d6f-4b54-b57a-c59d9b3cd7a0"],
+
+Cell[BoxData["\<\"Los Angeles Clippers - NBA Schedule & Game Log | Odds Shark\
+\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849709214697`*^9},ExpressionUUID->"58d36e59-8101-485a-8417-\
+7ec825aaa003"],
+
+Cell[BoxData["37"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884974339246*^9},ExpressionUUID->"57ea4431-0f83-4e7c-9b79-\
+4bdeafdf2389"],
+
+Cell[BoxData["\<\"Indiana Pacers - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884974345779*^9},ExpressionUUID->"5326ae20-1251-46c7-a2e3-\
+5f355a5a6268"],
+
+Cell[BoxData["38"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884976702648*^9},ExpressionUUID->"f866536f-3fe3-41a5-912a-\
+329703542397"],
+
+Cell[BoxData["\<\"Utah Jazz - NBA Schedule & Game Log | Odds Shark\"\>"], \
+"Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884976710643*^9},ExpressionUUID->"619ae1b6-04e0-4020-bca7-\
+82c99cb23804"],
+
+Cell[BoxData["39"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849799215727`*^9},ExpressionUUID->"51aeae3e-85a7-4e93-9738-\
+1eb133bcc021"],
+
+Cell[BoxData["\<\"Los Angeles Lakers - NBA Schedule & Game Log | Odds Shark\"\
+\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.72288497992838*^9},ExpressionUUID->"c2fb4345-09fc-4e28-81bf-fba88139663c"],
+
+Cell[BoxData["40"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884982913553*^9},ExpressionUUID->"4f070864-70ea-4a39-807b-\
+4f0ccdfa4260"],
+
+Cell[BoxData["\<\"Houston Rockets - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884982920168*^9},ExpressionUUID->"3045c0da-051c-4479-9c98-\
+a424e3674049"],
+
+Cell[BoxData["41"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884985187196*^9},ExpressionUUID->"eff5e5ce-aa98-4eff-8132-\
+ab2d549df36e"],
+
+Cell[BoxData["\<\"Golden State Warriors - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849851951733`*^9},ExpressionUUID->"0d48cfb9-ab7a-44b6-b696-\
+d718cf515618"],
+
+Cell[BoxData["42"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849879877853`*^9},ExpressionUUID->"3fdaac05-ba7b-420e-8428-\
+2e628dcf7a45"],
+
+Cell[BoxData["\<\"Toronto Raptors - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884987995632*^9},ExpressionUUID->"064cb756-9c6e-4892-af2b-\
+b65032ff08b1"],
+
+Cell[BoxData["43"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884990352645*^9},ExpressionUUID->"194a25e3-ac1b-420f-a32f-\
+42975ee2c1ae"],
+
+Cell[BoxData["\<\"Detroit Pistons - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884990358757*^9},ExpressionUUID->"3592fb52-f53c-43b1-8c59-\
+5b5fb6818a35"],
+
+Cell[BoxData["44"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884994136664*^9},ExpressionUUID->"f102afbd-15f7-4556-ad68-\
+9ac2208f0353"],
+
+Cell[BoxData["\<\"Minnesota Timberwolves - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228849941445017`*^9},ExpressionUUID->"e011d04a-a56d-4971-a2cf-\
+20a88f465946"],
+
+Cell[BoxData["45"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884997030704*^9},ExpressionUUID->"28b4a1ff-8c81-4e0f-b15f-\
+284c5af46f56"],
+
+Cell[BoxData["\<\"Sacramento Kings - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884997039031*^9},ExpressionUUID->"d0474c31-df8f-42fe-8e58-\
+ab3be86d8bf7"],
+
+Cell[BoxData["46"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.72288499972717*^9},ExpressionUUID->"280294c0-2334-417e-ae37-16639118ad3a"],
+
+Cell[BoxData["\<\"Washington Wizards - NBA Schedule & Game Log | Odds Shark\"\
+\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722884999733016*^9},ExpressionUUID->"8ff3aee5-0f34-4b92-b89e-\
+499b3a429c8e"],
+
+Cell[BoxData["47"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722885002069407*^9},ExpressionUUID->"e767274d-75ca-47bb-b506-\
+524a829c4e0c"],
+
+Cell[BoxData["\<\"New York Knicks - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228850020785837`*^9},ExpressionUUID->"62a7744f-50d5-458d-8569-\
+4e0ca13938d2"],
+
+Cell[BoxData["48"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722885004575861*^9},ExpressionUUID->"b15172cd-3436-423c-933a-\
+8fc13978c416"],
+
+Cell[BoxData["\<\"Portland Trail Blazers - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228850045855093`*^9},ExpressionUUID->"3bf04d82-50ba-401e-859c-\
+8a2cc4a0c475"],
+
+Cell[BoxData["49"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228850075815*^9},ExpressionUUID->"2dc29dca-b9c1-4867-a2ee-38da40c051f2"],
+
+Cell[BoxData["\<\"Brooklyn Nets - NBA Schedule & Game Log | Odds Shark\"\>"], \
+"Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722885007588079*^9},ExpressionUUID->"27aff215-857b-4e81-926b-\
+3cd6694c24e8"],
+
+Cell[BoxData["50"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.722885010028082*^9},ExpressionUUID->"cd1a098b-bf79-46fe-a24b-\
+24c08dc4759e"],
+
+Cell[BoxData["\<\"Orlando Magic - NBA Schedule & Game Log | Odds Shark\"\>"], \
+"Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228850100374613`*^9},ExpressionUUID->"a6a66285-2003-4efd-a229-\
+566a597bdb43"],
+
+Cell[BoxData["51"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228850134729853`*^9},ExpressionUUID->"3b58e3c4-5706-4b40-bce5-\
+fd05bddc8a42"],
+
+Cell[BoxData["\<\"Charlotte Hornets - NBA Schedule & Game Log | Odds \
+Shark\"\>"], "Print",
+ CellChangeTimes->{3.722867760278287*^9, 
+  3.7228850134802723`*^9},ExpressionUUID->"49903c44-8fbe-4b8f-8bb4-\
+611c2d069a0e"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Save data + chop garbage off title", "Section",
+ CellChangeTimes->{{3.722867230437446*^9, 3.7228672381250887`*^9}, {
+  3.722867780608006*^9, 3.722867782120182*^9}, {3.722868199044145*^9, 
+  3.722868211858594*^9}},ExpressionUUID->"8ef9f79f-ab03-4ee4-9274-\
+a8b3d75e276b"],
+
+Cell[BoxData[
+ RowBox[{"For", "[", 
+  RowBox[{
+   RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+   RowBox[{"i", " ", "\[LessEqual]", " ", 
+    RowBox[{"Length", "[", "schedule", "]"}]}], ",", " ", 
+   RowBox[{"++", "i"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"chop", " ", "of", " ", "garbage", " ", "from", " ", "title"}], 
+    "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"schedule", "[", 
+      RowBox[{"[", 
+       RowBox[{"i", ",", "1"}], "]"}], "]"}], " ", "=", " ", 
+     RowBox[{
+      RowBox[{"StringSplit", "[", 
+       RowBox[{
+        RowBox[{"schedule", "[", 
+         RowBox[{"[", 
+          RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", "\"\< - \>\""}], "]"}], 
+      "[", 
+      RowBox[{"[", "1", "]"}], "]"}]}], ";"}]}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.722867971362296*^9, 3.722867975838615*^9}, 
+   3.722868046138109*^9},ExpressionUUID->"dd49b791-4efb-4cce-abf4-\
+1a4d7c873a36"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+   "\"\</Users/David/Desktop/BasketballModel/Oddsshark2018scheduledata.dat\>\"\
+", ",", "schedule", ",", "\"\<Table\>\""}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7228678568514853`*^9, 3.722867872665133*^9}, 
+   3.7228679805031967`*^9},ExpressionUUID->"b0621a7d-fc94-4b6f-958c-\
+abb64dfd5099"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Import data", "Section",
+ CellChangeTimes->{{3.722867230437446*^9, 3.7228672381250887`*^9}, {
+  3.722867780608006*^9, 3.722867782120182*^9}, {3.722868187701149*^9, 
+  3.72286819279519*^9}},ExpressionUUID->"2455e878-78ea-4cc1-a518-\
+d5a60dbe805e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"schedule", " ", "=", " ", 
+   RowBox[{"Import", "[", 
+    RowBox[{
+    "\"\</Users/David/Desktop/BasketballModel/Oddsshark2018scheduledata.dat\>\
+\"", ",", "\"\<TSV\>\""}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.722867882668817*^9, 3.722867903510096*^9}, 
+   3.722868147528185*^9},ExpressionUUID->"6988517c-76b1-4f56-8251-\
+8b7485bc1bbd"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "Get", " ", "form", " ", "of", " ", "data", " ", "back", " ", "exactly"}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.722868166806693*^9, 
+  3.722868175899765*^9}},ExpressionUUID->"59323d6e-b9a5-47f8-b67b-\
+b4257298a43f"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+    RowBox[{"i", " ", "\[LessEqual]", " ", 
+     RowBox[{"Length", "[", "schedule", "]"}]}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"schedule", "[", 
+       RowBox[{"[", 
+        RowBox[{"i", ",", "2"}], "]"}], "]"}], " ", "=", " ", 
+      RowBox[{"ToExpression", "[", 
+       RowBox[{"schedule", "[", 
+        RowBox[{"[", 
+         RowBox[{"i", ",", "2"}], "]"}], "]"}], "]"}]}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.722867906945754*^9, 3.722867946573172*^9}, {
+  3.722867996541769*^9, 
+  3.722868163103265*^9}},ExpressionUUID->"dc73ff8f-bffd-4103-abe3-\
+c7d87a21fd82"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.722867993304945*^9, 
+  3.722867994421019*^9}},ExpressionUUID->"7114b990-9cb2-4561-8201-\
+bfc2678ed3a0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Convert Date to date object", "Section",
+ CellChangeTimes->{{3.722867230437446*^9, 
+  3.7228672381250887`*^9}},ExpressionUUID->"b96a6d15-90fd-4d82-9cda-\
+c0f5ebfa7d39"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+    RowBox[{"i", " ", "\[LessEqual]", " ", 
+     RowBox[{"Length", "[", "schedule", "]"}]}], ",", " ", 
+    RowBox[{"++", "i"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"convert", " ", "date", " ", "objects"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", " ", "=", "1"}], ",", " ", 
+       RowBox[{"j", " ", "\[LessEqual]", " ", 
+        RowBox[{"Length", "[", 
+         RowBox[{"schedule", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "2", ",", "2", ",", ";;", ",", "1"}], "]"}], 
+          "]"}], "]"}]}], ",", 
+       RowBox[{"j", "++"}], ",", " ", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"schedule", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", "1"}], "]"}], 
+          "]"}], " ", "=", " ", 
+         RowBox[{"DateObject", "[", 
+          RowBox[{"schedule", "[", 
+           RowBox[{"[", 
+            RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", "1"}], "]"}], 
+           "]"}], "]"}]}], ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.722867453439706*^9, 3.7228674624859667`*^9}, {
+  3.722867564317685*^9, 3.722867579523715*^9}, {3.722867646348906*^9, 
+  3.7228677507693443`*^9}, {3.722868252804162*^9, 
+  3.7228682616843367`*^9}},ExpressionUUID->"b9ec14b1-6751-4ef1-b821-\
+b5e2c6570399"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Reshape teams", "Section",
+ CellChangeTimes->{{3.722867230437446*^9, 3.7228672381250887`*^9}, {
+  3.7228682907780037`*^9, 
+  3.722868297361005*^9}},ExpressionUUID->"718b1c9b-17c9-49b9-96df-\
+788209333784"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Get", " ", "team", " ", "names"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.7228812090319633`*^9, 
+  3.722881213842389*^9}},ExpressionUUID->"37bd704a-47ca-48b3-a7f8-\
+9fb0b6b0e66c"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"teamnames", "  ", "=", " ", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"schedule", "[", 
+     RowBox[{"[", 
+      RowBox[{";;", ",", "2", ",", "2", ",", ";;", ",", "2"}], "]"}], "]"}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"teamnames", " ", "=", " ", 
+    RowBox[{"StringReplace", "[", 
+     RowBox[{"teamnames", ",", 
+      RowBox[{"\"\<@ \>\"", "->", "\"\<\>\""}]}], "]"}]}], ";"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"teamnames", " ", "=", " ", 
+    RowBox[{"StringReplace", "[", 
+     RowBox[{"teamnames", ",", 
+      RowBox[{"\"\<vs \>\"", "->", "\"\<\>\""}]}], "]"}]}], ";"}], 
+  " "}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"teamnames", "=", " ", 
+   RowBox[{"Union", "[", "teamnames", "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7228682984171143`*^9, 3.722868389389908*^9}, 
+   3.722868421683826*^9, {3.722868505097642*^9, 3.722868531580402*^9}, {
+   3.722880798225787*^9, 3.722880809504407*^9}, 
+   3.722882291737772*^9},ExpressionUUID->"ce43077d-cd86-44ad-a3a7-\
+e70955d8c4e6"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"permutation", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{
+    "13", ",", "1", ",", "28", ",", "30", ",", "11", ",", "14", ",", "6", ",",
+      "2", ",", "22", ",", "20", ",", "19", ",", "16", ",", "15", ",", "18", 
+     ",", "8", ",", "5", ",", "4", ",", "23", ",", "12", ",", "26", ",", "7", 
+     ",", "29", ",", "10", ",", "9", ",", "27", ",", "24", ",", "3", ",", 
+     "21", ",", "17", ",", "25"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.722880968311964*^9, 3.7228810921624117`*^9}, {
+  3.722881161924213*^9, 3.722881162300219*^9}, {3.7228811983314734`*^9, 
+  3.7228811998188677`*^9}, {3.722881262938652*^9, 
+  3.722881409358625*^9}},ExpressionUUID->"c41ae9fa-6b4f-4dc9-bbb0-\
+dc6b1cdc449b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"schedulenames", " ", "=", " ", 
+   RowBox[{
+    RowBox[{"schedule", "[", 
+     RowBox[{"[", 
+      RowBox[{";;", ",", "1"}], "]"}], "]"}], "[", 
+    RowBox[{"[", "permutation", "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.7228810112193327`*^9, 3.7228810317356853`*^9}, {
+  3.722881422551609*^9, 
+  3.7228814294304113`*^9}},ExpressionUUID->"55d20f6b-0214-42f7-92f2-\
+66a7a175394b"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "Replace", " ", "schedule", " ", "titles", " ", "with", " ", "the", " ", 
+   "correct", " ", "team"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.722881228003368*^9, 
+  3.7228812357059717`*^9}},ExpressionUUID->"6111d807-8a37-4156-9577-\
+f85f2a507122"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nameconvert", " ", "=", " ", 
+   RowBox[{"Partition", "[", 
+    RowBox[{
+     RowBox[{"Riffle", "[", 
+      RowBox[{"teamnames", ",", "schedulenames"}], "]"}], ",", "2"}], "]"}]}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.7228814385466423`*^9, 
+  3.722881465734311*^9}},ExpressionUUID->"7e261667-b59f-4dea-8b4b-\
+4efef8d4b26c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableForm", "[", "nameconvert", "]"}]], "Input",
+ CellChangeTimes->{{3.7228814678885107`*^9, 
+  3.722881472195157*^9}},ExpressionUUID->"e8a2d1ed-c79a-4c56-b07a-\
+9de7e293f89b"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"\<\"Atlanta\"\>", "\<\"Atlanta Hawks\"\>"},
+    {"\<\"Boston\"\>", "\<\"Boston Celtics\"\>"},
+    {"\<\"Brooklyn\"\>", "\<\"Brooklyn Nets\"\>"},
+    {"\<\"Charlotte\"\>", "\<\"Charlotte Hornets\"\>"},
+    {"\<\"Chicago\"\>", "\<\"Chicago Bulls\"\>"},
+    {"\<\"Cleveland\"\>", "\<\"Cleveland Cavaliers\"\>"},
+    {"\<\"Dallas\"\>", "\<\"Dallas Mavericks\"\>"},
+    {"\<\"Denver\"\>", "\<\"Denver Nuggets\"\>"},
+    {"\<\"Detroit\"\>", "\<\"Detroit Pistons\"\>"},
+    {"\<\"Golden State\"\>", "\<\"Golden State Warriors\"\>"},
+    {"\<\"Houston\"\>", "\<\"Houston Rockets\"\>"},
+    {"\<\"Indiana\"\>", "\<\"Indiana Pacers\"\>"},
+    {"\<\"LA Clippers\"\>", "\<\"Los Angeles Clippers\"\>"},
+    {"\<\"LA Lakers\"\>", "\<\"Los Angeles Lakers\"\>"},
+    {"\<\"Memphis\"\>", "\<\"Memphis Grizzlies\"\>"},
+    {"\<\"Miami\"\>", "\<\"Miami Heat\"\>"},
+    {"\<\"Milwaukee\"\>", "\<\"Milwaukee Bucks\"\>"},
+    {"\<\"Minnesota\"\>", "\<\"Minnesota Timberwolves\"\>"},
+    {"\<\"New Orleans\"\>", "\<\"New Orleans Pelicans\"\>"},
+    {"\<\"New York\"\>", "\<\"New York Knicks\"\>"},
+    {"\<\"Oklahoma City\"\>", "\<\"Oklahoma City Thunder\"\>"},
+    {"\<\"Orlando\"\>", "\<\"Orlando Magic\"\>"},
+    {"\<\"Philadelphia\"\>", "\<\"Philadelphia 76ers\"\>"},
+    {"\<\"Phoenix\"\>", "\<\"Phoenix Suns\"\>"},
+    {"\<\"Portland\"\>", "\<\"Portland Trail Blazers\"\>"},
+    {"\<\"Sacramento\"\>", "\<\"Sacramento Kings\"\>"},
+    {"\<\"San Antonio\"\>", "\<\"San Antonio Spurs\"\>"},
+    {"\<\"Toronto\"\>", "\<\"Toronto Raptors\"\>"},
+    {"\<\"Utah\"\>", "\<\"Utah Jazz\"\>"},
+    {"\<\"Washington\"\>", "\<\"Washington Wizards\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{
+  3.7228814725257072`*^9, 3.722882323693186*^9, 3.722882539479776*^9, 
+   3.7228826645800734`*^9, 3.7228828330120564`*^9, 3.722882931086337*^9, 
+   3.722883021339283*^9, 3.722884705890299*^9, 3.722884787827939*^9, 
+   3.722884838241954*^9, 3.722884923350317*^9, 3.722885040905068*^9, 
+   3.7228854839604607`*^9, 3.722885643058585*^9, {3.722886230297368*^9, 
+   3.722886242966832*^9}},ExpressionUUID->"55dbdb38-b411-46ea-bae8-\
+2b21b9644ec3"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+    RowBox[{"i", " ", "\[LessEqual]", " ", 
+     RowBox[{"Length", "[", "schedule", "]"}]}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"(*", " ", 
+     RowBox[{"skip", " ", "title", " ", "col"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"schedule", "[", 
+       RowBox[{"[", 
+        RowBox[{"i", ",", "2", ",", "1"}], "]"}], "]"}], "=", 
+      RowBox[{"Insert", "[", 
+       RowBox[{
+        RowBox[{"schedule", "[", 
+         RowBox[{"[", 
+          RowBox[{"i", ",", "2", ",", "1"}], "]"}], "]"}], ",", 
+        "\"\<Away\>\"", ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"schedule", "[", 
+       RowBox[{"[", 
+        RowBox[{"i", ",", "2", ",", "1", ",", "3"}], "]"}], "]"}], "=", 
+      "\"\<Home\>\""}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", " ", "=", " ", "1"}], ",", " ", 
+       RowBox[{"j", " ", "\[LessEqual]", " ", 
+        RowBox[{"Length", "[", 
+         RowBox[{"schedule", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "2", ",", "2"}], "]"}], "]"}], "]"}]}], ",", 
+       RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"StringPosition", "[", 
+            RowBox[{
+             RowBox[{"schedule", "[", 
+              RowBox[{"[", 
+               RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", " ", "2"}], 
+               "]"}], "]"}], ",", "\"\<@ \>\""}], "]"}], "\[Equal]", 
+           RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"(*", " ", 
+           RowBox[{"Team", " ", 
+            RowBox[{"schedule", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "1"}], "]"}], "]"}], " ", "is", " ", "the", 
+            " ", "home", " ", "team"}], " ", "*)"}], "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"schedule", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", "2"}], "]"}], 
+             "]"}], " ", "=", " ", 
+            RowBox[{"StringReplace", "[", 
+             RowBox[{
+              RowBox[{"schedule", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", "2"}], "]"}], 
+               "]"}], ",", 
+              RowBox[{"\"\<vs \>\"", "->", "\"\<\>\""}]}], "]"}]}], ";", " ", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"schedule", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], "=", 
+            
+            RowBox[{"Insert", "[", 
+             RowBox[{
+              RowBox[{"schedule", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], 
+              ",", 
+              RowBox[{"schedule", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", "3"}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"schedule", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "2", ",", "2", ",", "j", ",", "2"}], "]"}], 
+             "]"}], " ", "=", " ", 
+            RowBox[{
+             RowBox[{"nameconvert", "[", 
+              RowBox[{"[", 
+               RowBox[{
+                RowBox[{"Position", "[", 
+                 RowBox[{"nameconvert", ",", 
+                  RowBox[{"schedule", "[", 
+                   RowBox[{"[", 
+                    RowBox[{"1", ",", "2", ",", "2", ",", "j", ",", "2"}], 
+                    "]"}], "]"}]}], " ", "]"}], "[", 
+                RowBox[{"[", 
+                 RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], "]"}], "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"StringPosition", "[", 
+               RowBox[{
+                RowBox[{"schedule", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", "  ", "2"}],
+                   "]"}], "]"}], ",", "\"\<vs \>\""}], "]"}], "\[Equal]", 
+              RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"(*", " ", 
+              RowBox[{"Team", " ", 
+               RowBox[{"schedule", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "1"}], "]"}], "]"}], " ", "is", " ", "the",
+                " ", "away", " ", "team"}], " ", "*)"}], 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"schedule", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", "2"}], "]"}],
+                 "]"}], "=", 
+               RowBox[{"StringReplace", "[", 
+                RowBox[{
+                 RowBox[{"schedule", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", "2"}], 
+                   "]"}], "]"}], ",", 
+                 RowBox[{"\"\<@ \>\"", "->", "\"\<\>\""}]}], "]"}]}], ";", 
+              " ", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"schedule", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], 
+               "=", 
+               RowBox[{"Insert", "[", 
+                RowBox[{
+                 RowBox[{"schedule", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], 
+                 ",", 
+                 RowBox[{"schedule", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", "2"}], "]"}]}],
+               ";", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"schedule", "[", 
+                RowBox[{"[", 
+                 RowBox[{"1", ",", "2", ",", "2", ",", "j", ",", "3"}], "]"}],
+                 "]"}], " ", "=", " ", 
+               RowBox[{
+                RowBox[{"nameconvert", "[", 
+                 RowBox[{"[", 
+                  RowBox[{
+                   RowBox[{"Position", "[", 
+                    RowBox[{"nameconvert", ",", 
+                    RowBox[{"schedule", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "2", ",", "2", ",", "j", ",", "3"}], 
+                    "]"}], "]"}]}], " ", "]"}], "[", 
+                   RowBox[{"[", 
+                    RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], "]"}], "[", 
+                
+                RowBox[{"[", "2", "]"}], "]"}]}], ";"}]}], 
+            "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", 
+         "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.722881495717291*^9, 3.722881581504586*^9}, {
+   3.7228816605965*^9, 3.722881687166726*^9}, {3.72288189868915*^9, 
+   3.722881980743431*^9}, {3.722882017025785*^9, 3.722882051247654*^9}, {
+   3.722882083294711*^9, 3.722882211786764*^9}, {3.722882245132164*^9, 
+   3.722882247057976*^9}, {3.7228824186319227`*^9, 3.722882421655095*^9}, {
+   3.7228824586550617`*^9, 3.722882474152457*^9}, 3.7228825970817738`*^9, {
+   3.722882640176381*^9, 3.722882652635612*^9}, {3.722882685539488*^9, 
+   3.722882721066811*^9}, {3.722882759938634*^9, 3.722882824818161*^9}, 
+   3.722882856425826*^9, {3.7228829097061787`*^9, 3.722882911952157*^9}, {
+   3.722883003599955*^9, 3.7228830072064962`*^9}, {3.72288318525872*^9, 
+   3.722883275686697*^9}, 
+   3.722884778995839*^9},ExpressionUUID->"e4cbc13f-d0ec-485c-82b1-\
+f41a9387f602"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Delete duplicates and reorder by date", "Section",
+ CellChangeTimes->{{3.722867230437446*^9, 3.7228672381250887`*^9}, {
+  3.7228682907780037`*^9, 3.722868297361005*^9}, {3.72288521434762*^9, 
+  3.7228852198417883`*^9}},ExpressionUUID->"36dfaf84-ead2-4d12-8cd8-\
+9ab986fcb240"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Insert", " ", "associated", " ", "team"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.722885281401997*^9, 3.722885316188442*^9}, {
+  3.7228857194353857`*^9, 
+  3.722885726929709*^9}},ExpressionUUID->"91e5242d-1f69-46bc-8081-\
+b63ea6adccbd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+    RowBox[{"i", " ", "\[LessEqual]", " ", 
+     RowBox[{"Length", "[", "schedule", "]"}]}], ",", 
+    RowBox[{"i", "++"}], ",", " ", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", " ", "=", "1"}], ",", " ", 
+       RowBox[{"j", " ", "\[LessEqual]", " ", 
+        RowBox[{"Length", "[", 
+         RowBox[{"schedule", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "2", ",", "2"}], "]"}], "]"}], "]"}]}], ",", 
+       RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"schedule", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], 
+            "]"}], ">", "8"}], " ", ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"schedule", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], " ", 
+            "=", " ", 
+            RowBox[{"Insert", "[", 
+             RowBox[{
+              RowBox[{"schedule", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], 
+              ",", 
+              RowBox[{"schedule", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "1"}], "]"}], "]"}], ",", "8"}], "]"}]}], 
+           ";"}], "\[IndentingNewLine]", ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"schedule", "[", 
+             RowBox[{"[", 
+              RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], " ", 
+            "=", " ", 
+            RowBox[{"Insert", "[", 
+             RowBox[{
+              RowBox[{"schedule", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], 
+              ",", "\"\<-\>\"", ",", 
+              RowBox[{"-", "1"}]}], "]"}]}], ";"}]}], "\[IndentingNewLine]", 
+         "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.7228853174048223`*^9, 3.722885459148398*^9}, {
+  3.722885517401683*^9, 3.7228856323904*^9}, {3.7228856642388563`*^9, 
+  3.722885664581567*^9}, {3.722886257585368*^9, 
+  3.7228862590227957`*^9}},ExpressionUUID->"18fafb88-9468-4d45-a9ed-\
+ef1a496d56d0"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Insert","ins",
+   "\"Cannot insert at position \\!\\(\\*RowBox[{\\\"{\\\", \\\"8\\\", \
+\\\"}\\\"}]\\) in \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{TemplateBox[List[RowBox[List[StyleBox[\\\"\\\\\\\"Day: \\\\\\\"\\\", \
+Rule[FontColor, GrayLevel[0.5`]], Rule[FontWeight, Plain]], \\\"\\\\\\\"Fri \
+22 Dec 2017\\\\\\\"\\\"]], RowBox[List[\\\"DateObject\\\", \\\"[\\\", \
+RowBox[List[RowBox[List[\\\"{\\\", RowBox[List[\\\"2017\\\", \\\",\\\", \
+\\\"12\\\", \\\",\\\", \\\"22\\\"]], \\\"}\\\"]], \\\",\\\", \
+\\\"\\\\\\\"Day\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\
+\",\\\", RowBox[List[\\\"-\\\", \\\"5.`\\\"]]]], \\\"]\\\"]]], \\\"DateObject\
+\\\", Rule[Editable, False]], \\\",\\\", \\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\
+\", \\\",\\\", \\\"\\\\\\\"Portland\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"REG\\\
+\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"-\\\\\\\"\\\"}], \\\"}\\\"}]\\)\"",2,586,61,29392384306016201809,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.722886230503625*^9},ExpressionUUID->"3cf47f92-c428-4ace-a827-\
+4bdf0c60da1c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Insert","ins",
+   "\"Cannot insert at position \\!\\(\\*RowBox[{\\\"{\\\", \\\"8\\\", \
+\\\"}\\\"}]\\) in \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{TemplateBox[List[RowBox[List[StyleBox[\\\"\\\\\\\"Day: \\\\\\\"\\\", \
+Rule[FontColor, GrayLevel[0.5`]], Rule[FontWeight, Plain]], \\\"\\\\\\\"Fri \
+22 Dec 2017\\\\\\\"\\\"]], RowBox[List[\\\"DateObject\\\", \\\"[\\\", \
+RowBox[List[RowBox[List[\\\"{\\\", RowBox[List[\\\"2017\\\", \\\",\\\", \
+\\\"12\\\", \\\",\\\", \\\"22\\\"]], \\\"}\\\"]], \\\",\\\", \
+\\\"\\\\\\\"Day\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\
+\",\\\", RowBox[List[\\\"-\\\", \\\"5.`\\\"]]]], \\\"]\\\"]]], \\\"DateObject\
+\\\", Rule[Editable, False]], \\\",\\\", \\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\
+\", \\\",\\\", \\\"\\\\\\\"Portland\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"REG\\\
+\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"-\\\\\\\"\\\"}], \\\"}\\\"}]\\)\"",2,586,62,29392384306016201809,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.722886230554098*^9},ExpressionUUID->"5963d1de-e099-4e8d-b224-\
+ea398a72ea13"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Insert","ins",
+   "\"Cannot insert at position \\!\\(\\*RowBox[{\\\"{\\\", \\\"8\\\", \
+\\\"}\\\"}]\\) in \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{TemplateBox[List[RowBox[List[StyleBox[\\\"\\\\\\\"Day: \\\\\\\"\\\", \
+Rule[FontColor, GrayLevel[0.5`]], Rule[FontWeight, Plain]], \\\"\\\\\\\"Fri \
+22 Dec 2017\\\\\\\"\\\"]], RowBox[List[\\\"DateObject\\\", \\\"[\\\", \
+RowBox[List[RowBox[List[\\\"{\\\", RowBox[List[\\\"2017\\\", \\\",\\\", \
+\\\"12\\\", \\\",\\\", \\\"22\\\"]], \\\"}\\\"]], \\\",\\\", \
+\\\"\\\\\\\"Day\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\
+\",\\\", RowBox[List[\\\"-\\\", \\\"5.`\\\"]]]], \\\"]\\\"]]], \\\"DateObject\
+\\\", Rule[Editable, False]], \\\",\\\", \\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\
+\", \\\",\\\", \\\"\\\\\\\"Portland\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"REG\\\
+\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"-\\\\\\\"\\\"}], \\\"}\\\"}]\\)\"",2,586,63,29392384306016201809,
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.722886230596912*^9},ExpressionUUID->"ba364b97-d6ae-440d-962c-\
+4f8959fd3cde"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Insert\\\", \\\"::\\\", \
+\\\"ins\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,586,64,29392384306016201809,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{
+  3.722886230620862*^9},ExpressionUUID->"86d2ccf9-c0ff-4542-a0ea-\
+68673e4b83a1"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "delete", " ", "any", " ", "games", " ", "where", " ", "they", " ", "are", 
+   " ", "not", " ", "the", " ", "favorite"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.722885281401997*^9, 
+  3.722885316188442*^9}},ExpressionUUID->"9dead0f2-3ab9-4a19-a308-\
+ae4e30024107"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"linedata", " ", "=", " ", 
+   RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"For", "[", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "1"}], ",", " ", 
+    RowBox[{"i", " ", "\[LessEqual]", " ", 
+     RowBox[{"Length", "[", "schedule", "]"}]}], ",", 
+    RowBox[{"i", "++"}], ",", " ", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"j", " ", "=", "1"}], ",", " ", 
+       RowBox[{"j", " ", "\[LessEqual]", " ", 
+        RowBox[{"Length", "[", 
+         RowBox[{"schedule", "[", 
+          RowBox[{"[", 
+           RowBox[{"i", ",", "2", ",", "2"}], "]"}], "]"}], "]"}]}], ",", 
+       RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "[", 
+            RowBox[{"schedule", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}], 
+            "]"}], " ", ">", "9"}], " ", ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"schedule", "[", 
+               RowBox[{"[", 
+                RowBox[{"i", ",", "2", ",", "2", ",", "j", ",", "9"}], "]"}], 
+               "]"}], " ", ">", "0"}], ",", "\[IndentingNewLine]", ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"AppendTo", "[", 
+              RowBox[{"linedata", ",", 
+               RowBox[{"schedule", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", "2", ",", "2", ",", "j"}], "]"}], "]"}]}], 
+              "]"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+     ";"}]}], "\[IndentingNewLine]", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7228853174048223`*^9, 3.722885459148398*^9}, {
+  3.722885517401683*^9, 3.7228856323904*^9}, {3.7228856642388563`*^9, 
+  3.722885664581567*^9}, {3.722885752474769*^9, 3.7228858182301893`*^9}, {
+  3.722886133633505*^9, 3.7228861664637117`*^9}, {3.722886209081317*^9, 
+  3.722886211134845*^9}},ExpressionUUID->"8f24620b-a371-46a9-9af9-\
+589c4c27e261"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"9\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{TemplateBox[List[RowBox[List[StyleBox[\\\"\\\\\\\"Day: \\\\\\\"\\\", \
+Rule[FontColor, GrayLevel[0.5`]], Rule[FontWeight, Plain]], \\\"\\\\\\\"Fri \
+22 Dec 2017\\\\\\\"\\\"]], RowBox[List[\\\"DateObject\\\", \\\"[\\\", \
+RowBox[List[RowBox[List[\\\"{\\\", RowBox[List[\\\"2017\\\", \\\",\\\", \
+\\\"12\\\", \\\",\\\", \\\"22\\\"]], \\\"}\\\"]], \\\",\\\", \
+\\\"\\\\\\\"Day\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\
+\",\\\", RowBox[List[\\\"-\\\", \\\"5.`\\\"]]]], \\\"]\\\"]]], \\\"DateObject\
+\\\", Rule[Editable, False]], \\\",\\\", \\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\
+\", \\\",\\\", \\\"\\\\\\\"Portland\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"REG\\\
+\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\"}], \\\"}\\\"}]\\) does not exist.\"",2,
+   568,57,29392384306016201809,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.722886168814886*^9, 
+  3.722886211491302*^9},ExpressionUUID->"5ca1a962-8dfe-46b5-a54c-\
+ed7e52e13748"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"9\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{TemplateBox[List[RowBox[List[StyleBox[\\\"\\\\\\\"Day: \\\\\\\"\\\", \
+Rule[FontColor, GrayLevel[0.5`]], Rule[FontWeight, Plain]], \\\"\\\\\\\"Sat \
+23 Dec 2017\\\\\\\"\\\"]], RowBox[List[\\\"DateObject\\\", \\\"[\\\", \
+RowBox[List[RowBox[List[\\\"{\\\", RowBox[List[\\\"2017\\\", \\\",\\\", \
+\\\"12\\\", \\\",\\\", \\\"23\\\"]], \\\"}\\\"]], \\\",\\\", \
+\\\"\\\\\\\"Day\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\
+\",\\\", RowBox[List[\\\"-\\\", \\\"5.`\\\"]]]], \\\"]\\\"]]], \\\"DateObject\
+\\\", Rule[Editable, False]], \\\",\\\", \\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\
+\", \\\",\\\", \\\"\\\\\\\"Golden State\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"REG\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\"}], \\\"}\\\"}]\\) does not exist.\"",2,
+   568,58,29392384306016201809,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.722886168814886*^9, 
+  3.722886211547798*^9},ExpressionUUID->"3d9f7a52-89f9-45e9-9f75-\
+4a533480ac92"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Part","partw",
+   "\"Part \\!\\(\\*RowBox[{\\\"9\\\"}]\\) of \\!\\(\\*RowBox[{\\\"{\\\", \
+RowBox[{TemplateBox[List[RowBox[List[StyleBox[\\\"\\\\\\\"Day: \\\\\\\"\\\", \
+Rule[FontColor, GrayLevel[0.5`]], Rule[FontWeight, Plain]], \\\"\\\\\\\"Tue \
+26 Dec 2017\\\\\\\"\\\"]], RowBox[List[\\\"DateObject\\\", \\\"[\\\", \
+RowBox[List[RowBox[List[\\\"{\\\", RowBox[List[\\\"2017\\\", \\\",\\\", \
+\\\"12\\\", \\\",\\\", \\\"26\\\"]], \\\"}\\\"]], \\\",\\\", \
+\\\"\\\\\\\"Day\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"Gregorian\\\\\\\"\\\", \\\
+\",\\\", RowBox[List[\\\"-\\\", \\\"5.`\\\"]]]], \\\"]\\\"]]], \\\"DateObject\
+\\\", Rule[Editable, False]], \\\",\\\", \\\"\\\\\\\"Utah\\\\\\\"\\\", \
+\\\",\\\", \\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"REG\
+\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \\\"\\\\\\\"-\\\\\\\"\\\", \\\",\\\", \
+\\\"\\\\\\\"Denver Nuggets\\\\\\\"\\\"}], \\\"}\\\"}]\\) does not exist.\"",2,
+   568,59,29392384306016201809,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.722886168814886*^9, 
+  3.722886211590426*^9},ExpressionUUID->"8e7071d6-1096-43e3-890d-\
+82c2612f70d6"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General","stop",
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Part\\\", \\\"::\\\", \
+\\\"partw\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"",2,568,60,29392384306016201809,"Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.722886168814886*^9, 
+  3.722886211609063*^9},ExpressionUUID->"a20f1e94-8d08-41d1-a129-\
+bcf05db02e34"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"schedule", "[", 
+  RowBox[{"[", "1", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.722885338374303*^9, 3.722885342131626*^9}, {
+   3.722885395760668*^9, 3.722885395879602*^9}, {3.7228854648677073`*^9, 
+   3.722885470753982*^9}, {3.722885524275721*^9, 3.722885541560958*^9}, {
+   3.722885649053453*^9, 3.7228857033621473`*^9}, {3.72288584378996*^9, 
+   3.7228859068114843`*^9}, 
+   3.722886175976356*^9},ExpressionUUID->"e4656dbc-9aab-4dd6-b5bc-\
+22799ecf644d"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"Boston Celtics\"\>", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"\<\"Date\"\>", ",", "\<\"Away\"\>", ",", "\<\"Home\"\>", 
+       ",", "\<\"Game\"\>", ",", "\<\"Result\"\>", ",", "\<\"Score\"\>", 
+       ",", "\<\"ATS\"\>", ",", "\<\"Spread\"\>", ",", "\<\"OU\"\>", 
+       ",", "\<\"Total\"\>", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>"}], 
+      "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 17 Oct 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "10", ",", "17"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Cleveland Cavaliers\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"L\"\>", ",", "\<\"102-99\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "4.5`", ",", "\<\"U\"\>", ",", 
+         "216", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 18 Oct 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "10", ",", "18"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Milwaukee Bucks\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"108-100\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "1.5`"}], ",", "\<\"O\"\>", ",", "204", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 20 Oct 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "10", ",", "20"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Philadelphia 76ers\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"W\"\>", ",", "\<\"102-92\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "3", ",", "\<\"U\"\>", ",", 
+         "216.5`", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 24 Oct 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "10", ",", "24"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"New York Knicks\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"110-89\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "7"}], ",", "\<\"U\"\>", ",", "208", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 26 Oct 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "10", ",", "26"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Milwaukee Bucks\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>",
+          ",", "\<\"96-89\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "4.5`", ",", "\<\"U\"\>", ",", 
+         "207", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 28 Oct 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "10", ",", "28"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Miami Heat\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"96-90\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"Ev\"\>", ",", "\<\"U\"\>", 
+         ",", "204.5`", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 30 Oct 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "10", ",", "30"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"San Antonio Spurs\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"108-94\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "4"}], ",", "\<\"O\"\>", ",", "193.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 1 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "1"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Sacramento Kings\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"113-86\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "12"}], ",", "\<\"O\"\>", ",", "195", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 3 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "3"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Oklahoma City Thunder\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"W\"\>", ",", "\<\"101-94\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "6.5`", ",", "\<\"U\"\>", ",", 
+         "207.5`", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 5 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "5"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Orlando Magic\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"104-88\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "3.5`"}], ",", "\<\"U\"\>", ",", "208.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 6 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "6"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Atlanta Hawks\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"110-107\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "8"}], ",", "\<\"O\"\>", ",", "203.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 8 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "8"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Los Angeles Lakers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"107-96\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "6.5`"}], ",", "\<\"U\"\>", ",", "215", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 10 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "10"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Charlotte Hornets\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"90-87\"\>", ",", "\<\"P\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "3"}], ",", "\<\"U\"\>", ",", "204", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 12 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "12"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Toronto Raptors\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"95-94\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "3.5`", ",", "\<\"U\"\>", ",", 
+         "202", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 14 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "14"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Brooklyn Nets\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"109-102\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "6.5`"}], ",", "\<\"O\"\>", ",", "209.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 16 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "16"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Golden State Warriors\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"92-88\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "7", ",", "\<\"U\"\>", ",", 
+         "218", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 18 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "18"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Atlanta Hawks\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"110-99\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "6"}], ",", "\<\"O\"\>", ",", "202.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 20 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "20"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Dallas Mavericks\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"W\"\>", ",", "\<\"110-102\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "6.5`"}], ",", "\<\"O\"\>", ",", "200.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 22 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "22"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Miami Heat\"\>", ",", "\<\"REG\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"104-98\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "1.5`"}], ",", "\<\"O\"\>", ",", "196", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 24 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "24"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Orlando Magic\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"118-103\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "6.5`"}], ",", "\<\"O\"\>", ",", "208.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 25 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "25"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Indiana Pacers\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"108-98\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "3.5`"}], ",", "\<\"O\"\>", ",", "204.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 27 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "27"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Detroit Pistons\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"118-108\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "6"}], ",", "\<\"O\"\>", ",", "198.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 30 Nov 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "11", ",", "30"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Philadelphia 76ers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"108-97\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "8"}], ",", "\<\"U\"\>", ",", "211.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 2 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "2"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Phoenix Suns\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"116-111\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "12"}], ",", "\<\"O\"\>", ",", "216", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 4 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "4"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Milwaukee Bucks\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"111-100\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "4.5`"}], ",", "\<\"O\"\>", ",", "203.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 6 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "6"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Dallas Mavericks\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"97-90\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "8"}], ",", "\<\"U\"\>", ",", "201.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 8 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "8"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"San Antonio Spurs\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"L\"\>", ",", "\<\"105-102\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "2.5`", ",", "\<\"O\"\>", ",", 
+         "197.5`", ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 10 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "10"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Detroit Pistons\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>",
+          ",", "\<\"91-81\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "1.5`"}], ",", "\<\"U\"\>", ",", "201.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 11 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "11"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Chicago Bulls\"\>", ",", "\<\"REG\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"108-85\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "5.5`"}], ",", "\<\"U\"\>", ",", "193.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 13 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "13"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Denver Nuggets\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"124-118\"\>", ",", "\<\"P\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "6"}], ",", "\<\"O\"\>", ",", "208", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 15 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "15"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Utah Jazz\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"107-95\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "4.5`"}], ",", "\<\"O\"\>", ",", "197.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 16 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "16"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Memphis Grizzlies\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"W\"\>", ",", "\<\"102-93\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "5.5`"}], ",", "\<\"P\"\>", ",", "195", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 18 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "18"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Indiana Pacers\"\>", ",", "\<\"REG\"\>", ",", "\<\"W\"\>", 
+         ",", "\<\"112-111\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "2.5`"}], ",", "\<\"O\"\>", ",", "206.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"Recap\"\>", ",", "\<\"-\"\>"}], 
+        "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 20 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "20"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Miami Heat\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"90-89\"\>", ",", "\<\"L\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", 
+         RowBox[{"-", "9"}], ",", "\<\"U\"\>", ",", "199.5`", 
+         ",", "\<\"Preview\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 21 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "21"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"New York Knicks\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"Preview\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 23 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "23"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Chicago Bulls\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 25 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "25"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Washington Wizards\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 27 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "27"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Charlotte Hornets\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 28 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "28"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Houston Rockets\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 31 Dec 2017\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2017", ",", "12", ",", "31"}], "}"}], ",", 
+               "\"Day\"", ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Brooklyn Nets\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 3 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "3"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Cleveland Cavaliers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 5 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "5"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Minnesota Timberwolves\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 6 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "6"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Brooklyn Nets\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 11 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "11"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Philadelphia 76ers\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 16 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "16"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"New Orleans Pelicans\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 18 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "18"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Philadelphia 76ers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 21 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "21"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Orlando Magic\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 23 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "23"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Los Angeles Lakers\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 24 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "24"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Los Angeles Clippers\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 27 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "27"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Golden State Warriors\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 29 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "29"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Denver Nuggets\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 31 Jan 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "1", ",", "31"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"New York Knicks\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 2 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "2"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Atlanta Hawks\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 4 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "4"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Portland Trail Blazers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 6 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "6"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Toronto Raptors\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>",
+          ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 8 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "8"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Washington Wizards\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 9 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "9"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Indiana Pacers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 11 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "11"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Cleveland Cavaliers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 14 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "14"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Los Angeles Clippers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 23 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "23"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Detroit Pistons\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>",
+          ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 24 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "24"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"New York Knicks\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>",
+          ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 26 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "26"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Memphis Grizzlies\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 28 Feb 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "2", ",", "28"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Charlotte Hornets\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 3 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "3"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Houston Rockets\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>",
+          ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 5 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "5"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Chicago Bulls\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Thu 8 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "8"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Minnesota Timberwolves\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 11 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "11"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Indiana Pacers\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 14 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "14"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Washington Wizards\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 16 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "16"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Orlando Magic\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 18 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "18"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"New Orleans Pelicans\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 20 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "20"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Oklahoma City Thunder\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 23 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "23"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Portland Trail Blazers\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 25 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "25"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Sacramento Kings\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Mon 26 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "26"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Phoenix Suns\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 28 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "28"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Utah Jazz\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sat 31 Mar 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "3", ",", "31"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Toronto Raptors\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 3 Apr 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "4", ",", "3"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Milwaukee Bucks\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>",
+          ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 4 Apr 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "4", ",", "4"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Toronto Raptors\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>",
+          ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Fri 6 Apr 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "4", ",", "6"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Chicago Bulls\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Sun 8 Apr 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "4", ",", "8"}], "}"}], ",", "\"Day\"", 
+               ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Atlanta Hawks\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Tue 10 Apr 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "4", ",", "10"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Boston Celtics\"\>", 
+         ",", "\<\"Washington Wizards\"\>", ",", "\<\"REG\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         TemplateBox[{RowBox[{
+             StyleBox[
+             "\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+             "\"Wed 11 Apr 2018\""}],RowBox[{"DateObject", "[", 
+             RowBox[{
+               RowBox[{"{", 
+                 RowBox[{"2018", ",", "4", ",", "11"}], "}"}], ",", "\"Day\"",
+                ",", "\"Gregorian\"", ",", 
+               RowBox[{"-", "5.`"}]}], "]"}]},
+          "DateObject",
+          Editable->False], ",", "\<\"Brooklyn Nets\"\>", 
+         ",", "\<\"Boston Celtics\"\>", ",", "\<\"REG\"\>", ",", "\<\"-\"\>", 
+         ",", "\<\"-\"\>", ",", "\<\"-\"\>", ",", "\<\"-\"\>"}], "}"}]}], 
+      "}"}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.722885342432743*^9, 3.722885396200531*^9, {3.7228854682550097`*^9, 
+   3.722885470918268*^9}, {3.7228855208059196`*^9, 3.722885541919682*^9}, {
+   3.7228856512418823`*^9, 3.722885674106461*^9}, {3.7228858466578197`*^9, 
+   3.722885907054805*^9}, 
+   3.722886176280559*^9},ExpressionUUID->"311ccf1c-06a4-4ccd-8c0b-\
+a65a840a0d9d"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1197, 603},
+WindowMargins->{{10, Automatic}, {11, Automatic}},
+FrontEndVersion->"11.1 for Mac OS X x86 (32-bit, 64-bit Kernel) (April 27, \
+2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 175, 3, 92, "Title", "ExpressionUUID" -> \
+"fc3ace78-de84-411c-824a-76dd6a994f33"],
+Cell[CellGroupData[{
+Cell[780, 29, 1711, 42, 201, "Input", "ExpressionUUID" -> \
+"00c7c199-a506-4ec3-834e-d23b414a5d41"],
+Cell[CellGroupData[{
+Cell[2516, 75, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"2a744d7a-6472-4785-a60c-407037e04ae0"],
+Cell[2671, 80, 215, 4, 24, "Print", "ExpressionUUID" -> \
+"7acf9322-d28c-4a91-a1d5-37ea12d0c72b"],
+Cell[2889, 86, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"31aee398-56c0-4031-b242-0c15099c7860"],
+Cell[3044, 91, 213, 4, 24, "Print", "ExpressionUUID" -> \
+"6164ac8b-d70c-4600-9609-f498ecffddd5"],
+Cell[3260, 97, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"391bb6bc-b260-45a0-a9ac-c82f5235f362"],
+Cell[3415, 102, 216, 4, 24, "Print", "ExpressionUUID" -> \
+"e337069e-9305-41c9-ac1d-6aec3ff7e201"],
+Cell[3634, 108, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"4a5c3074-dadf-4c53-a38e-d2847d142135"],
+Cell[3789, 113, 214, 4, 24, "Print", "ExpressionUUID" -> \
+"4cfe4176-f905-4a12-b589-4b97ba1c3cd0"],
+Cell[4006, 119, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"05964846-9c9a-4d2f-95b2-bf3979955969"],
+Cell[4161, 124, 211, 4, 24, "Print", "ExpressionUUID" -> \
+"3424f0f2-fcbf-43fe-a06f-0618a459ed15"],
+Cell[4375, 130, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"6d59aaf8-cc9e-4f68-9b2f-4ba9b548c79b"],
+Cell[4530, 135, 215, 4, 24, "Print", "ExpressionUUID" -> \
+"70bf16ab-25d7-410d-8802-42e10997dbe3"],
+Cell[4748, 141, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"7185774d-8490-4fa4-958b-e2a877b5116a"],
+Cell[4903, 146, 222, 4, 24, "Print", "ExpressionUUID" -> \
+"f22a8302-e7bb-428c-97cb-11462ed90715"],
+Cell[5128, 152, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"87c1a53a-26eb-48e8-9357-46209b7a864d"],
+Cell[5283, 157, 216, 4, 24, "Print", "ExpressionUUID" -> \
+"72ac1efc-95d8-49d4-91ce-d12e8bdc1fb0"],
+Cell[5502, 163, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"2e69826d-925b-4cb9-805a-50a34911262e"],
+Cell[5657, 168, 211, 4, 24, "Print", "ExpressionUUID" -> \
+"04d74446-8e30-4efe-b035-77a9c5c9d206"],
+Cell[5871, 174, 149, 2, 24, "Print", "ExpressionUUID" -> \
+"6755bc35-dfb1-462c-b0bd-b94d706118df"],
+Cell[6023, 178, 217, 4, 24, "Print", "ExpressionUUID" -> \
+"caeff9c9-28c7-4309-830e-cc6894149f45"],
+Cell[6243, 184, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"1dc4c5f7-e924-4784-b55a-cddea7d295b1"],
+Cell[6398, 189, 212, 4, 24, "Print", "ExpressionUUID" -> \
+"607d0dcd-fdf0-4218-995f-1954f8b6a447"],
+Cell[6613, 195, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"4f7e0cdd-5f7a-4cfa-936e-58f7664f5499"],
+Cell[6768, 200, 219, 4, 24, "Print", "ExpressionUUID" -> \
+"80ed02c7-c0fb-4557-b4bd-f1b527097f72"],
+Cell[6990, 206, 154, 3, 24, "Print", "ExpressionUUID" -> \
+"72a25e38-749f-4894-ac2c-15993034b623"],
+Cell[7147, 211, 212, 4, 24, "Print", "ExpressionUUID" -> \
+"fae5b897-8ad7-425e-8142-d353ccaaed13"],
+Cell[7362, 217, 154, 3, 24, "Print", "ExpressionUUID" -> \
+"32a1d398-50f0-4e57-9c21-181cb5e4c3e7"],
+Cell[7519, 222, 218, 4, 24, "Print", "ExpressionUUID" -> \
+"8117779a-453a-4711-a691-5c9321302da3"],
+Cell[7740, 228, 149, 2, 24, "Print", "ExpressionUUID" -> \
+"4b19ae93-5d6f-4b54-b57a-c59d9b3cd7a0"],
+Cell[7892, 232, 221, 4, 24, "Print", "ExpressionUUID" -> \
+"58d36e59-8101-485a-8417-7ec825aaa003"],
+Cell[8116, 238, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"57ea4431-0f83-4e7c-9b79-4bdeafdf2389"],
+Cell[8271, 243, 213, 4, 24, "Print", "ExpressionUUID" -> \
+"5326ae20-1251-46c7-a2e3-5f355a5a6268"],
+Cell[8487, 249, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"f866536f-3fe3-41a5-912a-329703542397"],
+Cell[8642, 254, 208, 4, 24, "Print", "ExpressionUUID" -> \
+"619ae1b6-04e0-4020-bca7-82c99cb23804"],
+Cell[8853, 260, 154, 3, 24, "Print", "ExpressionUUID" -> \
+"51aeae3e-85a7-4e93-9738-1eb133bcc021"],
+Cell[9010, 265, 214, 3, 24, "Print", "ExpressionUUID" -> \
+"c2fb4345-09fc-4e28-81bf-fba88139663c"],
+Cell[9227, 270, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"4f070864-70ea-4a39-807b-4f0ccdfa4260"],
+Cell[9382, 275, 214, 4, 24, "Print", "ExpressionUUID" -> \
+"3045c0da-051c-4479-9c98-a424e3674049"],
+Cell[9599, 281, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"eff5e5ce-aa98-4eff-8132-ab2d549df36e"],
+Cell[9754, 286, 222, 4, 24, "Print", "ExpressionUUID" -> \
+"0d48cfb9-ab7a-44b6-b696-d718cf515618"],
+Cell[9979, 292, 154, 3, 24, "Print", "ExpressionUUID" -> \
+"3fdaac05-ba7b-420e-8428-2e628dcf7a45"],
+Cell[10136, 297, 214, 4, 24, "Print", "ExpressionUUID" -> \
+"064cb756-9c6e-4892-af2b-b65032ff08b1"],
+Cell[10353, 303, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"194a25e3-ac1b-420f-a32f-42975ee2c1ae"],
+Cell[10508, 308, 214, 4, 24, "Print", "ExpressionUUID" -> \
+"3592fb52-f53c-43b1-8c59-5b5fb6818a35"],
+Cell[10725, 314, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"f102afbd-15f7-4556-ad68-9ac2208f0353"],
+Cell[10880, 319, 223, 4, 24, "Print", "ExpressionUUID" -> \
+"e011d04a-a56d-4971-a2cf-20a88f465946"],
+Cell[11106, 325, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"28b4a1ff-8c81-4e0f-b15f-284c5af46f56"],
+Cell[11261, 330, 215, 4, 24, "Print", "ExpressionUUID" -> \
+"d0474c31-df8f-42fe-8e58-ab3be86d8bf7"],
+Cell[11479, 336, 149, 2, 24, "Print", "ExpressionUUID" -> \
+"280294c0-2334-417e-ae37-16639118ad3a"],
+Cell[11631, 340, 217, 4, 24, "Print", "ExpressionUUID" -> \
+"8ff3aee5-0f34-4b92-b89e-499b3a429c8e"],
+Cell[11851, 346, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"e767274d-75ca-47bb-b506-524a829c4e0c"],
+Cell[12006, 351, 216, 4, 24, "Print", "ExpressionUUID" -> \
+"62a7744f-50d5-458d-8569-4e0ca13938d2"],
+Cell[12225, 357, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"b15172cd-3436-423c-933a-8fc13978c416"],
+Cell[12380, 362, 223, 4, 24, "Print", "ExpressionUUID" -> \
+"3bf04d82-50ba-401e-859c-8a2cc4a0c475"],
+Cell[12606, 368, 148, 2, 24, "Print", "ExpressionUUID" -> \
+"2dc29dca-b9c1-4867-a2ee-38da40c051f2"],
+Cell[12757, 372, 212, 4, 24, "Print", "ExpressionUUID" -> \
+"27aff215-857b-4e81-926b-3cd6694c24e8"],
+Cell[12972, 378, 152, 3, 24, "Print", "ExpressionUUID" -> \
+"cd1a098b-bf79-46fe-a24b-24c08dc4759e"],
+Cell[13127, 383, 214, 4, 24, "Print", "ExpressionUUID" -> \
+"a6a66285-2003-4efd-a229-566a597bdb43"],
+Cell[13344, 389, 154, 3, 24, "Print", "ExpressionUUID" -> \
+"3b58e3c4-5706-4b40-bce5-fd05bddc8a42"],
+Cell[13501, 394, 218, 4, 24, "Print", "ExpressionUUID" -> \
+"49903c44-8fbe-4b8f-8bb4-611c2d069a0e"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13768, 404, 276, 4, 64, "Section", "ExpressionUUID" -> \
+"8ef9f79f-ab03-4ee4-9274-a8b3d75e276b"],
+Cell[14047, 410, 973, 26, 96, "Input", "ExpressionUUID" -> \
+"dd49b791-4efb-4cce-abf4-1a4d7c873a36"],
+Cell[15023, 438, 362, 8, 32, "Input", "ExpressionUUID" -> \
+"b0621a7d-fc94-4b6f-958c-abb64dfd5099"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15422, 451, 252, 4, 64, "Section", "ExpressionUUID" -> \
+"2455e878-78ea-4cc1-a518-d5a60dbe805e"],
+Cell[15677, 457, 382, 9, 32, "Input", "ExpressionUUID" -> \
+"6988517c-76b1-4f56-8251-8b7485bc1bbd"],
+Cell[16062, 468, 269, 7, 32, "Input", "ExpressionUUID" -> \
+"59323d6e-b9a5-47f8-b67b-b4257298a43f"],
+Cell[16334, 477, 787, 21, 75, "Input", "ExpressionUUID" -> \
+"dc73ff8f-bffd-4103-abe3-c7d87a21fd82"],
+Cell[17124, 500, 152, 3, 32, "Input", "ExpressionUUID" -> \
+"7114b990-9cb2-4561-8201-bfc2678ed3a0"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17313, 508, 174, 3, 64, "Section", "ExpressionUUID" -> \
+"b96a6d15-90fd-4d82-9cda-c0f5ebfa7d39"],
+Cell[17490, 513, 1565, 38, 138, "Input", "ExpressionUUID" -> \
+"b9ec14b1-6751-4ef1-b821-b5e2c6570399"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19092, 556, 211, 4, 64, "Section", "ExpressionUUID" -> \
+"718b1c9b-17c9-49b9-96df-788209333784"],
+Cell[19306, 562, 231, 5, 32, "Input", "ExpressionUUID" -> \
+"37bd704a-47ca-48b3-a7f8-9fb0b6b0e66c"],
+Cell[19540, 569, 1102, 29, 96, "Input", "ExpressionUUID" -> \
+"ce43077d-cd86-44ad-a3a7-e70955d8c4e6"],
+Cell[20645, 600, 742, 14, 32, "Input", "ExpressionUUID" -> \
+"c41ae9fa-6b4f-4dc9-bbb0-dc6b1cdc449b"],
+Cell[21390, 616, 425, 11, 32, "Input", "ExpressionUUID" -> \
+"55d20f6b-0214-42f7-92f2-66a7a175394b"],
+Cell[21818, 629, 301, 7, 32, "Input", "ExpressionUUID" -> \
+"6111d807-8a37-4156-9577-f85f2a507122"],
+Cell[22122, 638, 363, 10, 32, "Input", "ExpressionUUID" -> \
+"7e261667-b59f-4dea-8b4b-4efef8d4b26c"],
+Cell[CellGroupData[{
+Cell[22510, 652, 200, 4, 32, "Input", "ExpressionUUID" -> \
+"e8a2d1ed-c79a-4c56-b07a-9de7e293f89b"],
+Cell[22713, 658, 2595, 52, 564, "Output", "ExpressionUUID" -> \
+"55dbdb38-b411-46ea-bae8-2b21b9644ec3"]
+}, Open  ]],
+Cell[25323, 713, 7919, 182, 474, "Input", "ExpressionUUID" -> \
+"e4cbc13f-d0ec-485c-82b1-f41a9387f602"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33279, 900, 282, 4, 64, "Section", "ExpressionUUID" -> \
+"36dfaf84-ead2-4d12-8cd8-9ab986fcb240"],
+Cell[33564, 906, 288, 6, 32, "Input", "ExpressionUUID" -> \
+"91e5242d-1f69-46bc-8081-b63ea6adccbd"],
+Cell[CellGroupData[{
+Cell[33877, 916, 2517, 62, 201, "Input", "ExpressionUUID" -> \
+"18fafb88-9468-4d45-a9ed-ef1a496d56d0"],
+Cell[36397, 980, 1146, 20, 35, "Message", "ExpressionUUID" -> \
+"3cf47f92-c428-4ace-a827-4bdf0c60da1c"],
+Cell[37546, 1002, 1146, 20, 35, "Message", "ExpressionUUID" -> \
+"5963d1de-e099-4e8d-b224-ea398a72ea13"],
+Cell[38695, 1024, 1146, 20, 35, "Message", "ExpressionUUID" -> \
+"ba364b97-d6ae-440d-962c-4f8959fd3cde"],
+Cell[39844, 1046, 399, 9, 24, "Message", "ExpressionUUID" -> \
+"86d2ccf9-c0ff-4542-a0ea-68673e4b83a1"]
+}, Open  ]],
+Cell[40258, 1058, 313, 7, 32, "Input", "ExpressionUUID" -> \
+"9dead0f2-3ab9-4a19-a308-ae4e30024107"],
+Cell[CellGroupData[{
+Cell[40596, 1069, 2223, 52, 243, "Input", "ExpressionUUID" -> \
+"8f24620b-a371-46a9-9af9-589c4c27e261"],
+Cell[42822, 1123, 1230, 20, 35, "Message", "ExpressionUUID" -> \
+"5ca1a962-8dfe-46b5-a54c-ed7e52e13748"],
+Cell[44055, 1145, 1234, 20, 35, "Message", "ExpressionUUID" -> \
+"3d9f7a52-89f9-45e9-9f75-4a533480ac92"],
+Cell[45292, 1167, 1226, 20, 35, "Message", "ExpressionUUID" -> \
+"8e7071d6-1096-43e3-890d-82c2612f70d6"],
+Cell[46521, 1189, 421, 9, 24, "Message", "ExpressionUUID" -> \
+"a20f1e94-8d08-41d1-a129-bcf05db02e34"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[46979, 1203, 484, 9, 32, "Input", "ExpressionUUID" -> \
+"e4656dbc-9aab-4dd6-b5bc-22799ecf644d"],
+Cell[47466, 1214, 64244, 1396, 2085, "Output", "ExpressionUUID" -> \
+"311ccf1c-06a4-4ccd-8c0b-a65a840a0d9d"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
